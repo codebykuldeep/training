@@ -9,7 +9,7 @@ let inputString="";
 
 let PrevOp = false;
 let Operator ="";
-let ans = 0;
+let ans = parseFloat(0);
 
 clearBtn.addEventListener('click',()=>{
     inputString="";
