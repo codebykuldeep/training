@@ -9,7 +9,7 @@ let inputString="";
 
 let PrevOp = false;
 let Operator ="";
-let ans = parseFloat(0);
+let ans ;
 
 clearBtn.addEventListener('click',()=>{
     inputString="";
@@ -63,7 +63,7 @@ function evaluteAnswer(val){
             ans%=val;
             break;
         default:
-            ans +=val;
+            ans =val;
             break;
     }
 }
