@@ -7,28 +7,63 @@ const ansBtn = document.getElementById('answer')
 
 let inputString="";
 
+let PrevOp = false;
+let Operator ="";
+let ans = 0;
+
 clearBtn.addEventListener('click',()=>{
     inputString="";
     inputbox.innerHTML=inputString;
     outputbox.innerHTML=inputString;
+    PrevOp=false;
+    ans=0;
 })
 ansBtn.addEventListener('click',()=>{
-    outputbox.innerHTML=inputString;
+    if(!PrevOp){
+        outputbox.innerHTML=ans;
+    }
 })
 
 btnlist.forEach((btn)=>{
     btn.addEventListener('click',()=>{
         inputString+=btn.innerHTML;
         inputbox.innerHTML=inputString;
+        PrevOp = false;
+
+        evaluteAnswer(parseFloat(btn.innerHTML));
     })
 })
 
 opList.forEach((opr)=>{
     opr.addEventListener('click',()=>{
-        if(inputString.length !== 0){
+        if(inputString.length !== 0 && !PrevOp){
+            PrevOp = true ;
             inputString+=opr.innerHTML;
             inputbox.innerHTML=inputString;
+            Operator = opr.innerHTML;
         }
     })
 })
 
+function evaluteAnswer(val){
+    switch (Operator) {
+        case '+':
+            ans+=val;
+            break;
+        case '-':
+            ans-=val;
+            break;
+        case '*':
+                ans*=val;
+                break;
+        case '/':
+            ans/=val;
+            break;
+        case '%':
+            ans%=val;
+            break;
+        default:
+            ans +=val;
+            break;
+    }
+}

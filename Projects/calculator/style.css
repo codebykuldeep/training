@@ -23,6 +23,10 @@
     border-radius: 30px;
     text-align: right;
     height: 40px;
+
+    overflow: scroll;
+    scrollbar-width: none;
+    cursor: default;
    
 }
 
