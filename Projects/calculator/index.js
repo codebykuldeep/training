@@ -18,7 +18,8 @@ clearBtn.addEventListener('click',()=>{
     outputbox.innerHTML=inputString;
     PrevOp=false;
     ans=0;
-    PrevVal=""
+    PrevVal="";
+    Operator="";
 })
 ansBtn.addEventListener('click',()=>{
     if(!PrevOp){
@@ -30,11 +31,16 @@ ansBtn.addEventListener('click',()=>{
 
 btnlist.forEach((btn)=>{
     btn.addEventListener('click',()=>{
+        
+        PrevOp = false;
+        PrevVal+=btn.innerHTML;
+
         inputString+=btn.innerHTML;
         inputbox.innerHTML=inputString;
 
-        PrevOp = false;
-        PrevVal+=btn.innerHTML;
+        console.log(PrevVal);
+        
+
     })
 })
 
@@ -53,6 +59,9 @@ opList.forEach((opr)=>{
 })
 
 function evaluteAnswer(val){
+    if(!val)
+        return;
+    
     switch (Operator) {
         case '+':
             ans+=val;
@@ -70,8 +79,8 @@ function evaluteAnswer(val){
             ans%=val;
             break;
         default:
-            ans =val;
+            ans = val;
             break;
     }
-    PrevVal=""
+    PrevVal="";
 }
