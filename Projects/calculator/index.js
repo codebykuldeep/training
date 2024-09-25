@@ -8,6 +8,7 @@ const ansBtn = document.getElementById('answer')
 let inputString="";
 
 let PrevOp = false;
+let PrevVal="";
 let Operator ="";
 let ans ;
 
@@ -17,10 +18,13 @@ clearBtn.addEventListener('click',()=>{
     outputbox.innerHTML=inputString;
     PrevOp=false;
     ans=0;
+    PrevVal=""
 })
 ansBtn.addEventListener('click',()=>{
     if(!PrevOp){
+        evaluteAnswer(parseFloat(PrevVal));
         outputbox.innerHTML=ans;
+        
     }
 })
 
@@ -28,15 +32,18 @@ btnlist.forEach((btn)=>{
     btn.addEventListener('click',()=>{
         inputString+=btn.innerHTML;
         inputbox.innerHTML=inputString;
-        PrevOp = false;
 
-        evaluteAnswer(parseFloat(btn.innerHTML));
+        PrevOp = false;
+        PrevVal+=btn.innerHTML;
     })
 })
 
 opList.forEach((opr)=>{
     opr.addEventListener('click',()=>{
         if(inputString.length !== 0 && !PrevOp){
+            evaluteAnswer(parseFloat(PrevVal));
+
+
             PrevOp = true ;
             inputString+=opr.innerHTML;
             inputbox.innerHTML=inputString;
@@ -66,4 +73,5 @@ function evaluteAnswer(val){
             ans =val;
             break;
     }
+    PrevVal=""
 }
