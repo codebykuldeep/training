@@ -1,4 +1,4 @@
-//closures are variabel bundled along with lexical environment
+//closures are functions bundled along with their  lexical environment
 
 function a(){
     var i= 5;
