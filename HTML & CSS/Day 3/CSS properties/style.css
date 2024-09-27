@@ -1,0 +1,104 @@
+.float{
+    border: 2px solid red;
+    float: left;
+}
+.float-next{
+    border: 2px solid green
+}
+
+.clear{
+    float: left;
+    border: 2px solid red;
+}
+
+.clear-next{
+    clear: left;
+    border: 2px solid green
+
+}
+
+.align{
+    border: 1px solid black;
+    width: 50%;
+    margin: auto;
+}
+
+
+.drop{
+    position: relative;
+    display: inline-block;
+}
+.drop-list{
+    position: absolute;
+    display: none;
+    background-color: aqua;
+    width: 100%;
+}
+
+.drop:hover .drop-list {
+    display: block;
+}
+
+a{
+    all: unset;
+}
+a[target='_blank']{
+    color:red;
+}
+
+
+
+.box{
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    margin: 30px;
+    
+}
+.div1:hover{
+    animation-name: divchange;
+    animation-duration: 5s;
+    
+}
+
+@keyframes divchange {
+    from{
+        background-color: green;
+    }
+    to{
+        background-color: blue;
+        width: 150px;
+        height: 150px;
+    }
+}
+
+@keyframes div2 {
+    0% {background-color: red;}
+    50% {background-color: green;
+    width: 200px;}
+    100% {
+        background-color: yellow;
+    }
+}
+
+.div2{
+    animation-name: div2;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+}
+
+.text-box{
+    padding: 10px;
+    border:2px solid black;
+    animation-name: textmove;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in;
+}
+
+@keyframes textmove {
+    0% {text-align: left;}
+    50% {text-align: center;}
+    100% {text-align: right;}
+}
