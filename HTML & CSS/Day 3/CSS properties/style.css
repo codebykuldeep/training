@@ -102,3 +102,21 @@ a[target='_blank']{
     50% {text-align: center;}
     100% {text-align: right;}
 }
+
+
+.img-overlay img{
+    width: 200px;
+    height: 180px;
+}
+.img-overlay{
+    position:relative;
+    width: 200px;
+    height: 180px;
+}
+.overlay-text{
+    background-color: blue;
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform:translate(-50%,-50%) ;
+}
