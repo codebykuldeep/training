@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lazy Loading</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Lazy Loading</h1>
+    <div class="img-container">
+        <div class="blur-load" style="background-image: url(img/blur/img1.jpg);">
+            <img src="img/img1.jpg" id="1" loading="lazy">
+        </div>
+        <div class="blur-load" style="background-image: url(img/blur/img2.jpg);">
+            <img src="img/img2.jpg" id="2" alt="" srcset="" loading="lazy">
+        </div>
+        <div class="blur-load" style="background-image: url(img/blur/img3.jpg);">
+            <img src="img/img3.jpg" id="3" alt="" srcset="" loading="lazy">
+        </div>
+        <div class="blur-load" style="background-image: url(img/blur/img4.jpg);">
+            <img src="img/img4.jpg"  id="4" alt="" srcset="" loading="lazy">
+        </div>
+        <div class="blur-load" style="background-image: url(img/blur/img5.jpg);">
+            <img src="img/img5.jpg" id="5" alt="" srcset="" loading="lazy">
+        </div>
+        <div class="blur-load" style="background-image: url(img/blur/img6.jpg);">
+            <img src="img/img6.jpg" id="6" alt="" srcset="" loading="lazy">
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
