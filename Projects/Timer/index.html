@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="heading">
+        <h2>Timer</h2>
+        <p>This is a Timer which automatically continues if your page get reloaded. This is done using Local Storage</p>
+
+    </div>
+    <div class="inp-section">
+        <input type="number" name="" class="input"  min="0" max="59" placeholder="Hour">
+        <input type="number" name="" class="input"  min="0" max="59" placeholder="Minutes">
+        <input type="number" name="" class="input"  min="0" max="59" placeholder="Seconds">
+        <button id="start">Start</button>
+    </div>
+
+    <div class="timer">
+        <div class="timer-data">
+            <span class="show">0</span>
+            <span> h:</span>
+            <span class="show">0</span>
+            <span> m:</span>
+            <span class="show">0</span>
+            <span> s</span>
+        </div>
+        <div class="timer-button">
+            <button id="timer-resume">Resume</button>
+            <button id="timer-pause">Pause</button>
+            <button id="timer-reset">Reset</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
