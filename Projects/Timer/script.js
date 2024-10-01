@@ -30,7 +30,7 @@ startBtn.addEventListener('click',()=>{
 
         StartBtnCLosed = true;
         setTimeout(()=>{StartBtnCLosed=false;},2000)
-        
+
         if(timer){ // just in case previous timer is still running so to remove it executing furthur
             stopTimer();
         }
@@ -44,7 +44,7 @@ pauseBtn.addEventListener('click',()=>{
     TimerRunning = false;
 })
 resumeBtn.addEventListener('click',()=>{
-    if(!TimerRunning){
+    if(!TimerRunning && data.hour){
         startTimer();
         TimerRunning = true;
     }
