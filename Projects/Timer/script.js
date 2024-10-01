@@ -6,7 +6,7 @@ let timer;
 
 let data ={};
 
-
+let StartBtnCLosed =false;
 let TimerRunning = false;
 
 
@@ -20,15 +20,22 @@ if(localStorage.getItem('data')){
 
 
 startBtn.addEventListener('click',()=>{
-    const input = document.querySelectorAll('.input');
-    data ={};
-    data.hour =input[0].value || 0;
-    data.minute=input[1].value || 0;
-    data.second=input[2].value || 0;
-    console.log(data);
+    if(!StartBtnCLosed){
+        const input = document.querySelectorAll('.input');
+        data ={};
+        data.hour =Number(input[0].value) || 0;
+        data.minute=Number(input[1].value) || 0;
+        data.second=Number(input[2].value) || 0;
+        console.log(data);
 
-
-    startTimer();
+        StartBtnCLosed = true;
+        setTimeout(()=>{StartBtnCLosed=false;},2000)
+        
+        if(timer){ // just in case previous timer is still running so to remove it executing furthur
+            stopTimer();
+        }
+        startTimer();
+    }
     
 })
 
@@ -89,7 +96,10 @@ function runTimer() {
     }
 
     if(data.hour === 0 && data.minute === 0 && data.second === 0){
+        alert('Time Up !')
+        localStorage.removeItem('data');
         stopTimer();
+       
     }
     updateView(data.hour,data.minute,data.second)
     localStorage.setItem('data',JSON.stringify(data));
