@@ -20,7 +20,7 @@ if(localStorage.getItem('data')){
 
 
 startBtn.addEventListener('click',()=>{
-    if(!StartBtnCLosed){
+    
         const input = document.querySelectorAll('.input');
         
         let hour =Number(input[0].value) || 0;
@@ -30,14 +30,11 @@ startBtn.addEventListener('click',()=>{
         data = hour*3600 +minute *60 +second
         console.log(data);
 
-        StartBtnCLosed = true;
-        setTimeout(()=>{StartBtnCLosed=false;},2000)
-
+        
         if(timer){ // just in case previous timer is still running so to remove it executing furthur
             stopTimer();
         }
         startTimer();
-    }
     
 })
 
