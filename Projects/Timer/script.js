@@ -4,14 +4,14 @@ const pauseBtn = document.getElementById('timer-pause');
 const resetBtn = document.getElementById('timer-reset');
 let timer;
 
-let data ={};
+let data ;
 
 let StartBtnCLosed =false;
 let TimerRunning = false;
 
 
 if(localStorage.getItem('data')){
-    data = JSON.parse(localStorage.getItem('data'));
+    data =Number(localStorage.getItem('data')) ;
     console.log(data);
     TimerRunning=true;
     startTimer();
@@ -22,10 +22,12 @@ if(localStorage.getItem('data')){
 startBtn.addEventListener('click',()=>{
     if(!StartBtnCLosed){
         const input = document.querySelectorAll('.input');
-        data ={};
-        data.hour =Number(input[0].value) || 0;
-        data.minute=Number(input[1].value) || 0;
-        data.second=Number(input[2].value) || 0;
+        
+        let hour =Number(input[0].value) || 0;
+        let minute=Number(input[1].value) || 0;
+        let second=Number(input[2].value) || 0;
+
+        data = hour*3600 +minute *60 +second
         console.log(data);
 
         StartBtnCLosed = true;
@@ -44,7 +46,7 @@ pauseBtn.addEventListener('click',()=>{
     TimerRunning = false;
 })
 resumeBtn.addEventListener('click',()=>{
-    if(!TimerRunning && data.hour){
+    if(!TimerRunning && data){
         startTimer();
         TimerRunning = true;
     }
@@ -53,22 +55,20 @@ resumeBtn.addEventListener('click',()=>{
 resetBtn.addEventListener('click',()=>{
     stopTimer();
 
-    data.hour =0;
-    data.minute=0;
-    data.second=0;
+    data = undefined;
     console.log(data);
-    updateView(data.hour,data.minute,data.second)
+
+    updateView(0)
     localStorage.removeItem('data')
     
 })
 
 
 
+
+
 function startTimer(){
-    const div =document.querySelectorAll('.show');
-    div[0].textContent =data.hour;
-    div[1].textContent =data.minute;
-    div[2].textContent =data.second;
+    updateView(data);
 
     TimerRunning= true;
     timer =setInterval(runTimer,1000);
@@ -77,31 +77,21 @@ function startTimer(){
 
 
 function runTimer() {
-    if(data.hour === 0 && data.minute === 0 && data.second === 0){
+    if(data === 0){
         localStorage.removeItem('data');
         stopTimer();
     }
     else{
-        data.second-=1;
-    if(data.second<0){
-        data.minute-=1;
-        data.second=59;
-    }
-    if(data.minute<0){
-        data.hour-=1
-        data.minute=59;
-    }
-    if(data.hour<=0){
-        data.hour=0
-    }
+        data= data - 1;
+    
 
-    if(data.hour === 0 && data.minute === 0 && data.second === 0){
+    if(data === 0){
         alert('Time Up !')
         localStorage.removeItem('data');
         stopTimer();
        
     }
-    updateView(data.hour,data.minute,data.second)
+    updateView(data)
     localStorage.setItem('data',JSON.stringify(data));
     
     }
@@ -115,8 +105,13 @@ function stopTimer(){
 
 
 
-function updateView(hour,minute,second){
+function updateView(data){
     const div =document.querySelectorAll('.show');
+
+    let hour =Math.floor(data/ 3600);
+    let minute= Math.floor((data%3600)/60);
+    let second= Math.floor((data%3600)%60);
+
     div[0].textContent =hour;
     div[1].textContent =minute;
     div[2].textContent =second;
