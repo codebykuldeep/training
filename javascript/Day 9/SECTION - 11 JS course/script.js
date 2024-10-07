@@ -93,7 +93,7 @@ const displayMovements = function (movements){
   });
 }
 
-displayMovements(account1.movements);
+
 
 const createUsername =(accounts)=>{
   accounts.forEach((account)=>{
@@ -106,11 +106,16 @@ const createUsername =(accounts)=>{
 }
 createUsername(accounts);
 
+
+//UI UPDATION METHOD
 const updateBalance=(account)=>{
   let balance = account.movements.reduce((total,val)=>{return total+val},0);
-
+  currentAccount.balance = balance;
   labelBalance.textContent = `${balance} EUR`
 }
+
+
+
 
 const updateSummaryLabel =(account)=>{
   let deposits = account.movements.reduce((total,val)=>{
@@ -119,6 +124,7 @@ const updateSummaryLabel =(account)=>{
     else
       return total;
   },0);
+
   let withdrawal =  account.movements.reduce((total,val)=>{
     if(val<0)
       return total+=val;
@@ -126,15 +132,149 @@ const updateSummaryLabel =(account)=>{
       return total;
   },0);
 
+  let interest =account.movements.reduce((total,val)=>{
+    
+    if(val>=0){
+      val =(val * account.interestRate)/100;
+      
+      return val>=1 ? total+val :total;
+    }  
+    else
+     return total;
+  },0)
+
   labelSumIn.textContent =`${deposits} $`;
-  labelSumOut.textContent = `${-1*withdrawal} $`;
-console.log(deposits,withdrawal);
+  labelSumOut.textContent = `${Math.abs(withdrawal)} $`;
+  labelSumInterest.textContent = `${interest} $`;
 }
 
-updateBalance(account1);
 
-updateSummaryLabel(account1)
 
+const updateUI =(account)=>{
+  updateBalance(account);
+  updateSummaryLabel(account)
+  displayMovements(account.movements);
+};
+
+
+
+
+
+
+
+//LOGIN FUNCTIONALITY
+let currentAccount ;
+
+btnLogin.addEventListener('click',(e)=>{
+  //prevent form default function of reload
+  e.preventDefault();
+
+  currentAccount = accounts.find((account ) => {
+    return account.username === inputLoginUsername.value;
+  })
+
+  console.log(currentAccount);
+
+  if(currentAccount?.pin === Number(inputLoginPin.value)){
+
+
+    //clear input fields
+    inputLoginUsername.value = inputLoginPin.value ='';
+    inputLoginPin.blur();
+
+    labelWelcome.textContent =`Welcome, ${currentAccount.owner}`
+    containerApp.style.opacity = 1;
+    updateUI(currentAccount);
+  }
+  
+})
+
+
+//Transfer Functionality
+btnTransfer.addEventListener('click',(e)=>{
+  //prevent form default function of reload
+  e.preventDefault();
+  let amount = Number(inputTransferAmount.value);
+  
+
+  let transferUsername =inputTransferTo.value;
+  let transferAccount = accounts.find((account)=>account.username === transferUsername );
+  
+
+  if(amount > 0 && transferAccount && currentAccount.balance>= amount){
+    currentAccount.movements.push(-1*amount);
+    transferAccount.movements.push(amount);
+  }
+
+
+  //Update UI
+
+  inputTransferAmount.value = inputTransferTo.value ='';
+  inputTransferTo.blur();
+
+  updateUI(currentAccount);
+})
+
+
+
+//Loan function
+btnLoan.addEventListener('click',(e)=>{
+  //prevent form default function of reload
+  e.preventDefault();
+  let amount = Number(inputLoanAmount.value);
+  let approved = currentAccount.movements.some((amt)=>{
+    return amt>= (0.1 * amount)
+  })
+
+  if(approved){
+    currentAccount.movements.push(amount);
+  }
+
+  //Update UI
+
+  inputLoanAmount.value = '';
+  inputLoanAmount.blur();
+
+  updateUI(currentAccount);
+})
+
+
+//close account function
+btnClose.addEventListener('click',(e)=>{
+  e.preventDefault();
+  if(inputCloseUsername.value === currentAccount.username
+    &&
+    Number(inputClosePin.value) === currentAccount.pin
+   ){
+
+    const index = accounts.findIndex((acc)=>
+      acc.username === currentAccount.username
+    );
+
+    console.log(index);
+    //delete account
+    accounts.splice(index,1);
+    labelWelcome.textContent =`Log in to get started`
+    containerApp.style.opacity = 0;
+    
+   }
+})
+
+//sot function
+let sortclicked = true;
+btnSort.addEventListener('click',()=>{
+  if(sortclicked){
+    let sortedArray = currentAccount.movements.toSorted((a,b)=>a-b);
+    displayMovements(sortedArray);
+    
+  }
+  else{
+    displayMovements(currentAccount.movements);
+  }
+
+  sortclicked =!sortclicked;
+  
+})
 
 
 

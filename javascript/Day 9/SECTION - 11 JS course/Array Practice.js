@@ -123,5 +123,25 @@ let max = movements.reduce((prev,curr)=>{
 console.log('maximum -> ',max);
 
 
+//find -> find first value which satisfy this condition
+console.log(movements.find(mov => mov < 0));
+
+
+
+//includes
+let list =[2,3,5,6,8,9];
+console.log(list.includes(8));
+
+
+//some
+console.log(list.some((i)=>i>7));
+
+
+//every
+console.log(list.every((i)=>i>0));
+
+
+
+
 
 
