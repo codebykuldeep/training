@@ -7,6 +7,9 @@
 :root{
     --background :#f0f9fb;
     --border:#e4e4e4;
+    --font-grey :#7d879c;
+    --font-pink :#eb3a7b;
+    --btn-color:#24aeb1;
 }
 
 .material-symbols-outlined {
