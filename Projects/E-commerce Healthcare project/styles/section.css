@@ -43,12 +43,33 @@
     margin: 0 10px;
 }
 
+.product-list{
+    padding-inline: 2rem;
+    display: flex;
+    gap:30px;
+}
+
 .product-container{
     width: 300px;
     box-sizing: border-box;
     padding-inline: 15px;
+
+    border: 1px solid var(--border);
 }
 .product-container img{
     width: 100%;
     object-fit: contain;
+}
+
+.product-info{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-inline: 15px;
+}
+
+
+/* DEAL SECTION */
+.deal-section{
+    background-image: url('assets/background1.webp');
 }
