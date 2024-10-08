@@ -1,0 +1,1 @@
+alert('I exceuted before parsing of html')

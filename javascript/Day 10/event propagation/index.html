@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>event propagation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Event bubbling</h1>
+    <p>Upward propagation of event</p>
+
+    <div class="red">
+        <div class="green">
+            <div class="blue">
+
+            </div>
+        </div>
+    </div>
+    <div class="result-bubble"></div>
+
+
+
+    <h1>Event capturing</h1>
+    <p>downward propagation of event</p>
+
+    <div class="red2">
+        <div class="green2">
+            <div class="blue2">
+
+            </div>
+        </div>
+    </div>
+
+    <div class="result-capture"></div>
+
+
+    <h1>Event Stop propagation</h1>
+    <p>stop propagation of event , propagation starts from parent to child</p>
+
+    <div class="red3">
+        <div class="green3">
+            <div class="blue3">
+
+            </div>
+        </div>
+    </div>
+
+    <div class="result-stop"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
