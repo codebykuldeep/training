@@ -29,3 +29,46 @@ Tue Oct 08 2024
 Tue, 08 Oct 2024 10:00:38 GMT
 
 */
+
+
+//parse date to millisecond
+let msec = Date.parse('April 22,2002');
+console.log(msec);
+
+console.log(new Date(msec));
+
+
+
+//convert millisecond to date 
+
+let millisecd = Date.now();
+console.log(new Date(millisecd));
+
+
+
+
+//Date get methods
+console.log('DATE GET METHOD');
+
+let d = new Date();
+console.log(d);
+
+console.log(d.getFullYear());
+
+console.log(d.getMonth());
+
+console.log(d.getDay());
+
+console.log(d.getMinutes());
+
+console.log(d.getSeconds());
+
+console.log(d.getTime());
+
+
+
+
+
+
+
+
