@@ -10,6 +10,7 @@
     --font-grey :#7d879c;
     --font-pink :#eb3a7b;
     --btn-color:#24aeb1;
+    --cart-background:#f6f6f7;
 }
 
 .material-symbols-outlined {
@@ -19,8 +20,11 @@
   'GRAD' 0,
   'opsz' 24
 }
-/* 
-https://cdn.shopify.com/s/files/1/0489/1171/2423/files/leo-medilazar-home1-slide2.jpg?v=1671415071
 
-
-https://cdn.shopify.com/s/files/1/0905/2012/files/slide0_b9eebbe5-6408-4743-998b-98c1f4e4fa0e.jpg?v=1605857288 */
+a{
+  all: unset;
+  cursor: pointer;
+}
+.btn{
+  cursor: pointer;
+}

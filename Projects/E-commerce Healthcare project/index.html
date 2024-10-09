@@ -7,6 +7,9 @@
 
     <link rel="stylesheet" href="styles/nav.css">
     <link rel="stylesheet" href="styles/section.css">
+    <link rel="stylesheet" href="styles/Footer.css">
+    <link rel="stylesheet" href="styles/modal.css">
+
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=shopping_bag" />
 </head>
 <body>
@@ -33,18 +36,16 @@
             </ol>
         </div>
         <div>
-            Sign In/Register
+           <span class="btn"> Sign In</span>/ <span class="btn">Register</span>
         </div>
         <div>
-            <span class="material-symbols-outlined">
-                shopping_bag
-                </span>
+            <i class="fa-regular fa-heart" style="font-size: 30px;"></i>
         </div>
-        <div>
+        <a href="/cart.html">
             <span class="material-symbols-outlined">
                 shopping_bag
             </span>
-        </div>
+        </a>
     </nav>
 
     <section class="hero-section">
@@ -66,7 +67,7 @@
             </div>
 
             <div>
-                <img src="" alt="">
+                <div><i class="fa-solid fa-user-doctor" ></i></div>
                 <div class="info-item">
                     <span>Diagnostic</span>
                     <span>Book tests & checkups</span>
@@ -102,40 +103,40 @@
         <div class="pro-head">
             <h1>Health Products</h1>
             <div class="pro-slider-btn">
-                <span>Left</span>
-                <span>right</span>
+                <span><i class="fa-solid fa-arrow-left"></i></span>
+                <span><i class="fa-solid fa-arrow-right"></i></span>
             </div>
         </div>
 
         <div class="product-list">
 
             <div class="product-container">
-                <img src="assets/products/mug-today-is-a-good-day.jpg" alt="">
+                <img src="assets/products/vitamin.jpg" alt="">
                 <div class="product-info">
                     <div class="category">category</div>
                     <div class="pro-name">Product Name</div>
                     <div><span>$100</span> <span>$90</span></div>
-                    <div><span>ICON</span><span>Add to Cart</span></div>
+                    <button><span>ICON</span><span>Add to Cart</span></button>
                 </div>
             </div>
 
             <div class="product-container">
-                <img src="assets/products/brown-bear-cushion.jpg" alt="">
+                <img src="assets/products/vitamin-k2.jpg" alt="">
                 <div class="product-info">
                     <div class="category">category</div>
                     <div class="pro-name">Product Name</div>
                     <div><span>$100</span> <span>$90</span></div>
-                    <div><span>ICON</span><span>Add to Cart</span></div>
+                    <button><span>ICON</span><span>Add to Cart</span></button>
                 </div>
             </div>
 
             <div class="product-container">
-                <img src="assets/products/brown-bear-printed-sweater.jpg" alt="">
+                <img src="assets/products/glucometer.jpg" alt="">
                 <div class="product-info">
                     <div class="category">category</div>
                     <div class="pro-name">Product Name</div>
                     <div><span>$100</span> <span>$90</span></div>
-                    <div><span>ICON</span><span>Add to Cart</span></div>
+                    <button><span>ICON</span><span>Add to Cart</span></button>
                 </div>
             </div>
         </div>
@@ -147,36 +148,36 @@
         <div class="pro-head deal-head">
             <h1>Daily Deal of the Day</h1>
             <div class="pro-slider-btn">
-                <span>Left</span>
-                <span>right</span>
+                <span><i class="fa-solid fa-arrow-left"></i></span>
+                <span><i class="fa-solid fa-arrow-right"></i></span>
             </div>
         </div>
 
         <div class="deal-list">
             <article class="deal-product">
                 <div class="deal-img">
-                    <img src="assets/products/hummingbird-printed-t-shirt.jpg" alt="">
+                    <img src="assets/products/steam-machine.jpg" alt="">
                 </div>
 
                 <div class="deal-product-info">
                     <div class="category">category</div>
                     <div class="pro-name">Product Name</div>
                     <div><span>$100</span> <span>$90</span></div>
-                    <div><span>ICON</span><span>Add to Cart</span></div>
+                    <button><span>ICON</span><span>Add to Cart</span></button>
                 </div>
             </article>
 
 
             <article class="deal-product">
                 <div class="deal-img">
-                    <img src="assets/products/hummingbird-printed-t-shirt.jpg" alt="">
+                    <img src="assets/products/glucometer.jpg" alt="">
                 </div>
 
                 <div class="deal-product-info">
                     <div class="category">category</div>
                     <div class="pro-name">Product Name</div>
                     <div><span>$100</span> <span>$90</span></div>
-                    <div><span>ICON</span><span>Add to Cart</span></div>
+                    <button><span>ICON</span><span>Add to Cart</span></button>
                 </div>
             </article>
         </div>
@@ -227,9 +228,131 @@
         </div>
     </section>
 
-    <section>
-        
+    <section class="doc-section">
+        <div class="doc-img">
+            <img src="assets/doc-img.webp" alt="" srcset="">
+        </div>
+        <div>
+            <h1>How to order medicines on Medilazar? It’s Simple.</h1>
+            <ol>
+                <li>Upload valid Prescription</li>
+                <li>Receive a confirmation call</li>
+                <li>Delivery at your door step</li>
+            </ol>
+            <h3>Don't have a Prescription? Don't worry!</h3>
+            <p>
+                Simply search & add the medicines OR get a consultation from a Medilazar doctor
+            </p>
+            <button><span>Arrow</span>About US<span</button>
+        </div>
     </section>
+
+
+
+    <section class="testimonial">
+        <div><i class="fa-solid fa-arrow-left"></i></div>
+        <div class="testimonial-content">
+            <div>
+                <img src="assets/rating.png" alt="">
+                <p> Very reliable always willing to help nothing is too much trouble, will 
+                    <br>
+                    always go the extra mile to help.
+                </p>
+            </div>
+            <div>
+                <span>James Lee</span><br><span>October 1, 2024</span>
+            </div>
+        </div>
+        <div><i class="fa-solid fa-arrow-right"></i></div>
+    </section>
+
+
+
+    <footer>
+        <div class="newsletter">
+            <h1>Sign Up For Newsletter</h1>
+            <p>Join 60.000+ Subscribers and get a new <br>
+                discount coupon every Saturday.</p>
+
+                <form action="">
+                    <div class="subscribe">
+                        <input type="text">
+                        <input type="submit" value="Subscribe">
+                    </div>
+                </form>
+        </div>
+        <div class="footer-bottom">
+            <div class="company-info">
+                <div>
+                    <img src="assets/logo.jpg" alt="">
+                </div>
+                <p>Medilazar Shop is proud of being a best Pharmacy Online shops in USA with high-quality medicines, supplements, healthcare product</p>
+            </div>
+            <div>
+                <h3>Links</h3>
+                <ol>
+                    <li>Cart</li>
+                    <li>Blog</li>
+                    <li>Account</li>
+                    <li>About Us</li>
+                </ol>
+            </div>
+            <div>
+                <h3>Socials</h3>
+                <ol>
+                    <li>Facebook</li>
+                    <li>Twitter</li>
+                    <li>Linkedin</li>
+                    <li>Pinterest</li>
+                    <li>Instagram</li>
+                </ol>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <!-- MODAL -->
+    <div class="login-modal modal hidden">
+        <div class="form-close-box">
+            <button class="close-modal">&times;</button>
+        </div>
+        <div class="form-box">
+            <h3>Login to your account</h3>
+            <form class="login-form">
+                <input type="text" placeholder="email" required>
+                <input type="password" placeholder="password" required>
+                <div>
+                    <input type="checkbox" name="" id=""><span>Remember Me</span>
+                </div>
+                <button type="submit">Login</button>
+            </form>
+        </div>
+    </div>
+
+
+    <div class="register-modal modal hidden">
+        <div class="form-close-box">
+            <button class="close-modal">&times;</button>
+        </div>
+        <div class="form-box">
+            <h3>New Account Registration</h3>
+            <form class="register-form">
+                <input type="text" placeholder="First Name" required>
+                <input type="text" placeholder="Last Name" required>
+                <input type="text" placeholder="email" required>
+                <input type="password" placeholder="password" required>
+                <div>
+                    <input type="checkbox" name="" id=""><span>Remember Me</span>
+                </div>
+                <button type="submit">Login</button>
+            </form>
+        </div>
+    </div>
+
+
+
+    <div class="overlay hidden"></div>
 
 
 
