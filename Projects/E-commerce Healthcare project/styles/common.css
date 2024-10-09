@@ -1,0 +1,23 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --background :#f0f9fb;
+    --border:#e4e4e4;
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
+/* 
+https://cdn.shopify.com/s/files/1/0489/1171/2423/files/leo-medilazar-home1-slide2.jpg?v=1671415071
+
+
+https://cdn.shopify.com/s/files/1/0905/2012/files/slide0_b9eebbe5-6408-4743-998b-98c1f4e4fa0e.jpg?v=1605857288 */

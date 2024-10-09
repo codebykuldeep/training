@@ -1,0 +1,25 @@
+.red,.red2,.red3{
+    position: relative;
+    width: 300px;
+    height: 300px;
+    background-color: red;
+}
+
+.green,.green2,.green3{
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background-color: green;
+    top: 50px;
+    left: 50px;
+}
+
+.blue,.blue2,.blue3{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+    
+    top: 50px;
+    left: 50px;
+}
