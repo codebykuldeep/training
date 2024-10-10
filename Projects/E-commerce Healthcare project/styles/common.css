@@ -21,6 +21,10 @@
   'opsz' 24
 }
 
+html{
+  scroll-behavior: smooth;
+}
+
 a{
   all: unset;
   cursor: pointer;

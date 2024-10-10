@@ -32,7 +32,10 @@ function handleModal(dom1,dom2){
 function UpdateUser(){
     userBox.textContent =`Hello , ${currentUser.firstName}`
 }
-
+//check if current user is available in session storage
+if(currentUser){
+    UpdateUser();
+}
 
 
 
@@ -69,6 +72,8 @@ loginSubmitBtn.addEventListener('click',(e)=>{
         if(tempUser?.password === password){
             currentUser = tempUser;
 
+            sessionStorage.setItem('currentUser',JSON.stringify(currentUser));
+
             UpdateUser();
             handleModal(loginModal,overlay);
         }
@@ -87,6 +92,7 @@ registerSubmitBtn.addEventListener('click',(e)=>{
     let registeredUser =new newUser(name,last,email,password);
 
     users.push(registeredUser);
+    updateUsersData();
     
 
     handleModal(registerModal,overlay);
