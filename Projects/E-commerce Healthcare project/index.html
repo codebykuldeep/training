@@ -35,8 +35,8 @@
                 <li>On Sale</li>
             </ol>
         </div>
-        <div>
-           <span class="btn"> Sign In</span>/ <span class="btn">Register</span>
+        <div class="user">
+           <span class="signin btn"> Sign In</span>/ <span class="register btn">Register</span>
         </div>
         <div>
             <i class="fa-regular fa-heart" style="font-size: 30px;"></i>
@@ -315,17 +315,17 @@
     <!-- MODAL -->
     <div class="login-modal modal hidden">
         <div class="form-close-box">
-            <button class="close-modal">&times;</button>
+            <button class="close-modal"><i class="fa-solid fa-xmark"></i></button>
         </div>
         <div class="form-box">
             <h3>Login to your account</h3>
             <form class="login-form">
-                <input type="text" placeholder="email" required>
-                <input type="password" placeholder="password" required>
+                <input type="text" class="login-data" placeholder="email" required>
+                <input type="password" class="login-data" placeholder="password" required>
                 <div>
-                    <input type="checkbox" name="" id=""><span>Remember Me</span>
+                    <input type="checkbox" id="remember" class="login-data"><label for="remember">Remember Me</label>
                 </div>
-                <button type="submit">Login</button>
+                <button type="submit" id="login-submit">Login</button>
             </form>
         </div>
     </div>
@@ -333,19 +333,19 @@
 
     <div class="register-modal modal hidden">
         <div class="form-close-box">
-            <button class="close-modal">&times;</button>
+            <button class="close-modal"><i class="fa-solid fa-xmark"></i></button>
         </div>
         <div class="form-box">
             <h3>New Account Registration</h3>
             <form class="register-form">
-                <input type="text" placeholder="First Name" required>
-                <input type="text" placeholder="Last Name" required>
-                <input type="text" placeholder="email" required>
-                <input type="password" placeholder="password" required>
+                <input type="text" placeholder="First Name" class="register-data" required>
+                <input type="text" placeholder="Last Name" class="register-data" required>
+                <input type="email" placeholder="email" class="register-data" required>
+                <input type="password" placeholder="password" class="register-data" required>
                 <div>
-                    <input type="checkbox" name="" id=""><span>Remember Me</span>
+                    <input type="checkbox" class="register-data" id="term" required><label for="term">I accept all T&C</label>
                 </div>
-                <button type="submit">Login</button>
+                <button type="submit" id="register-submit" >register</button>
             </form>
         </div>
     </div>
@@ -356,8 +356,10 @@
 
 
 
-
-
+    <script src="scripts/data.js"></script>
+    <script src="scripts/authentication.js"></script>
+    <script src="scripts/script.js"></script>
+    <script src="scripts/cart.js"></script>
     <script src="https://kit.fontawesome.com/0af408009a.js" crossorigin="anonymous"></script>
 
 </body>
