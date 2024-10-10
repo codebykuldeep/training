@@ -108,3 +108,53 @@
     height: auto;
     object-fit: contain;
 }
+
+
+
+/* DOCTOR SECTION */
+
+.doc-section{
+    display: flex;
+    padding: 70px 0;
+    margin-top: 2rem;
+    background-color: var(--background);
+}
+.doc-img{
+    width: 50%;
+    box-sizing: border-box;
+}
+
+.doc-img img{
+    object-fit: contain;
+}
+
+
+/* Testomonial section */
+.testimonial{
+    background-image: url('../assets/background-world.webp');
+    padding: 70px 15px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.testimonial-content{
+    text-align: center;
+}
+
+
+
+/* STICKY BUTTON */
+.sticky-go-top{
+    position: sticky;
+    top: 90%;
+    left: 90%;
+    width: 40px;
+    height: 40px;
+    font-size: 30px;
+    text-align: center;
+    background-color: var(--background);
+    border-radius: 50%;
+    cursor: pointer;
+}
