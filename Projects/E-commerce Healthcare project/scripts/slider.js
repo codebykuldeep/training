@@ -1,0 +1,63 @@
+const sliderLeft =document.querySelector('.slider-left');
+const sliderRight =document.querySelector('.slider-right');
+
+
+const carousel = document.querySelector('.product-list');
+const productCard =document.querySelector('.product-container').scrollWidth
+let isDragging = false, startX , startScrollLeft;
+
+const buttons =document.querySelectorAll('button');
+const card =370;//carousel.querySelector('.card').offsetWidth || ;
+
+console.log(card);
+
+
+// buttons.forEach((button)=>{
+//     button.addEventListener('click',()=>{
+//         console.log(button.id);
+        
+//         carousel.scrollLeft += button.id === 'left' ? -card: card;
+//     })
+// })
+
+sliderLeft.addEventListener('click',()=>{
+    console.log(window.screen.width/3);
+    
+    carousel.scrollLeft +=  -window.screen.width/3;
+})
+sliderRight.addEventListener('click',()=>{
+    console.log('clicked');
+    
+    carousel.scrollLeft += window.screen.width/3;
+})
+
+
+const dragStart =(e) =>{
+    isDragging =true;
+
+
+    //record the initial cursor and scroll position of the carousel
+    startX = e.pageX;
+    startScrollLeft = carousel.scrollLeft;
+     
+}
+
+const dragging = (e) =>{
+    if(!isDragging) return;
+    console.log(e.pageX);
+    carousel.scrollLeft = startScrollLeft - (e.pageX -startX);
+    
+    
+}
+
+
+const dragStop =()=>{
+    isDragging= false;
+
+}
+
+carousel.addEventListener('mousemove',dragging);
+carousel.addEventListener('mousedown',dragStart);
+
+
+document.addEventListener('mouseup',dragStop);
