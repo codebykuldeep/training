@@ -147,7 +147,7 @@
 
 /* STICKY BUTTON */
 .sticky-go-top{
-    position: sticky;
+    position: fixed;
     top: 90%;
     left: 90%;
     width: 40px;

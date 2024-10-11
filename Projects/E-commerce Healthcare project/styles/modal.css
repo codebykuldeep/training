@@ -48,3 +48,20 @@ body{
     flex-direction: column;
     gap: 15px;
 }
+
+
+
+
+
+
+/* Delete Modal */
+.delete-box{
+    padding: 30px;
+}
+
+.delete-btn-box{
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
