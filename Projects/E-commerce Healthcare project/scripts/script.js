@@ -7,7 +7,7 @@ function loadProducts(){
     productList.innerHTML ="";
     productData.forEach((product)=>{
         let html =`<div class="product-container">
-                        <img src="assets/products/${product.image}" alt="">
+                        <img src="assets/products/${product.image}" alt="" draggable="false">
                         <div class="product-info">
                             <div class="category">${product.brand}</div>
                             <div class="pro-name">${product.name}</div>
