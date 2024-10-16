@@ -45,8 +45,8 @@
         <div class="user">
            <span class="signin btn"> Sign In</span>/ <span class="register btn">Register</span>
         </div>
-        <div>
-            <i class="fa-regular fa-heart" style="font-size: 30px;"></i>
+        <div class="location-box">
+            <span class="location">India</span><span id="get-location" class="btn"> <i class="fa-solid fa-location-dot"></i></span>
         </div>
         <a href="/cart.html">
             <span class="material-symbols-outlined">
@@ -348,10 +348,14 @@
         <div class="form-box">
             <h3>New Account Registration</h3>
             <form class="register-form">
-                <input type="text" placeholder="First Name" class="register-data" required>
+                <input type="text" placeholder="First Name" name="first" class="register-data" required>
+                <div class="input-msg"></div>
                 <input type="text" placeholder="Last Name" class="register-data" required>
+                <div class="input-msg"></div>
                 <input type="email" placeholder="email" class="register-data" required>
+                <div class="input-msg"></div>
                 <input type="password" placeholder="password" class="register-data" required>
+                <div class="input-msg"></div>
                 <div>
                     <input type="checkbox" class="register-data" id="term" required><label for="term">I accept all T&C</label>
                 </div>
@@ -373,6 +377,7 @@
     <script src="scripts/cart.js"></script>
     <script src="scripts/searchbar.js"></script>
     <script src="scripts/slider.js"></script>
+    <script src="scripts/location.js"></script>
     <script src="https://kit.fontawesome.com/0af408009a.js" crossorigin="anonymous"></script>
 
 </body>

@@ -83,17 +83,107 @@ loginSubmitBtn.addEventListener('click',(e)=>{
 
 
 //register form
-registerSubmitBtn.addEventListener('click',(e)=>{
-    e.preventDefault();
-    let name = registerInput[0].value;
-    let last =registerInput[1].value;
-    let email = registerInput[2].value;
-    let password = registerInput[3].value;
-    let registeredUser =new newUser(name,last,email,password);
 
-    users.push(registeredUser);
-    updateUsersData();
+
+const validateForm =(inputDomArray) =>{
+
+    const emptyMsg ='This field is required.'
+    const inputMsg = document.querySelectorAll('.input-msg')
+    let result = true;
+    inputDomArray.forEach((inputElement,index) => {
+        console.log(index);
+        
+        if(inputElement.type === 'text'){
+            let testPattern =/^[A-Za-z]+$/;
+            
+            let text =inputElement.value;
+            console.log(testPattern.test(text));
+            if(!testPattern.test(text)){
+
+                inputElement.style.border ='1px solid red'
+                result =false;
+
+                if(text.length===0){
+                    inputMsg[index].textContent=emptyMsg;
+                }
+                else{
+                    inputMsg[index].textContent='Enter a valid Name';
+                }
+            }
+        }
+        if(inputElement.type === 'email'){
+            
+            console.log('email',inputElement.value);
+            let testPattern =/[A-Za-z]+$[^0-9]/;
+            
+            let text =inputElement.value;
+            console.log(testPattern.test(text));
+            if(!testPattern.test(text)){
+
+                inputElement.style.border ='1px solid red'
+                result =false;
+            }
+            
+        }
+        if(inputElement.type === 'password'){
+            
+            let testPattern =/^[A-Za-z0-9]{9,}$/;
+            
+            let text =inputElement.value;
+            console.log(testPattern.test(text));
+            if(!testPattern.test(text)){
+
+                inputElement.style.border ='1px solid red'
+                result =false;
+            }
+            
+        }
+        if(inputElement.type === 'checkbox'){
+            
+            result = inputElement.checked;
+            inputElement.parentNode.children[1].style.color ='red'
+            console.log('result',result);
+            
+        }
+    });
     
 
-    handleModal(registerModal,overlay);
+    return result;
+}
+
+
+
+registerSubmitBtn.addEventListener('click',(e)=>{
+    e.preventDefault();
+    console.log(registerInput[4].checked);
+    if(validateForm(registerInput)){
+        console.log('Registered');
+    }
+    else{
+        console.log('Failed');
+        
+    }
+
+
+
+
+
+    // let name = registerInput[0].value;
+    // let last =registerInput[1].value;
+    // let email = registerInput[2].value;
+    // let password = registerInput[3].value;
+    // let registeredUser =new newUser(name,last,email,password);
+
+    // users.push(registeredUser);
+    // updateUsersData();
+    
+
+    // handleModal(registerModal,overlay);
+})
+
+
+registerInput.forEach((inpElement)=>{
+    inpElement.addEventListener('focus',()=>{
+        inpElement.style.border ='1px solid gray'
+    })
 })
