@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>SVG elements</h1>
+
+    <svg width="'300" height="300">
+      <circle
+        cx="90"
+        cy="100"
+        r="80"
+        fill="blue"
+        stroke="green"
+        stroke-width="4"
+      />
+      <text x="47" y="110" font-size="40" font-family="Verdana" fill="white">
+        SVG
+      </text>
+    </svg>
+
+    <h2>Popover and Details</h2>
+    <button popovertarget="popover-1">Open popover1</button>
+    <div popover id="popover-1">This is popover 1</div>
+
+    <h3>Details</h3>
+
+    <details>
+      <summary>Details</summary>
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officia at omnis
+      veniam sed nemo veritatis ad dolorum aperiam quam soluta dolorem ea
+      molestiae quia quidem beatae consequuntur, quisquam tenetur molestias.
+    </details>
+
+    <details>
+      <summary>More Details</summary>
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officia at omnis
+      veniam sed nemo veritatis ad dolorum aperiam quam soluta dolorem ea
+      molestiae quia quidem beatae consequuntur, quisquam tenetur molestias.
+    </details>
+
+    <h2>Progress</h2>
+    <label for="file">File Progress:</label>
+    <progress id="file" max="100" value="70">70%</progress>
+
+    <!-- METER -->
+    <label for="fuel">File Progress:</label>
+    <meter
+      id="fuel"
+      max="100"
+      min="0"
+      low="30"
+      high="90"
+      optimal="80"
+      value="95"
+    >
+      50/100
+    </meter>
+  </body>
+</html>
