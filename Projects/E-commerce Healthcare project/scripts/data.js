@@ -49,13 +49,13 @@ let users = [
         firstName:'John',
         lastName : 'Doe',
         email:'johndoe@email.com',
-        password:'1111',
+        password:'12345678',
     },
     {
         firstName:'Zack',
         lastName : 'Dan',
         email:'zackdan@email.com',
-        password:'1111',
+        password:'12345678',
     }
 ];
 
