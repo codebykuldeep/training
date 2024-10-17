@@ -9,6 +9,32 @@
     justify-content: space-between;
     padding: 20px 2rem;
 }
+.info-box{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    border-left: 1px solid #ddddde;
+    padding-left: 10px;
+}
+.info-box:first-child{
+    border: none;
+}
+.info-icon{
+    width: 40px;
+    height: 40px;
+    background: red;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+
+}
+.info-icon i{
+    color: white;
+} 
+
 
 .info-item{
     display: flex;
@@ -40,6 +66,7 @@
 
 .product-section{
     padding: 45px 0 30px 0;
+    margin-bottom: 30px;
 }
 
 .pro-head{
@@ -65,6 +92,7 @@
 
     overflow: hidden;
     scroll-behavior: smooth;
+
 }
 
 .product-container{
@@ -73,6 +101,14 @@
     padding-inline: 15px;
 
     border: 1px solid var(--border);
+    box-shadow: 0px 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+/* .product-container:hover{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
+} */
+
+.wrapper{
+    margin-bottom: 30px;
 }
 .product-container img{
     width: 100%;
@@ -86,6 +122,57 @@
     padding-inline: 15px;
 }
 
+.product-info .category{
+    font-size: 13px;
+    color:var(--font-grey)
+}
+.product-info .pro-name{
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.pro-price span:first-child{
+    font-size: 1.2rem;
+    text-decoration: line-through;
+    color:var(--font-grey)
+}
+.pro-price span:last-child{
+    font-size: 1.4rem;
+    color:var(--font-pink);
+    font-weight: 400
+
+}
+
+
+.add-to-cart{
+    all: unset;
+    cursor: pointer;
+    margin-bottom: 15px;
+
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+}
+.add-to-cart:hover{
+    background-color: var(--btn-color);
+    border-radius: 50px;
+    color: white;
+}
+
+
+
+.add-to-cart span:first-child{
+    margin-right: 5px;
+    font-size: 20px;
+    height: 35px;
+    width: 35px;
+    background-color: var(--btn-color);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
 
 /* DEAL SECTION */
 .deal-head{
@@ -119,6 +206,18 @@
     object-fit: contain;
 }
 
+/* FEATURE INFO 2 */
+.feature-info-2 .info-box i{
+    color: black;
+    font-size: 25px;
+}
+.feature-info-2 .info-box{
+    border: none;
+}
+.feature-info-2 .info-icon{
+    width: 50px;
+    height: 50px;
+}
 
 
 /* DOCTOR SECTION */

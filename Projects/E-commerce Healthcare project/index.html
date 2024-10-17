@@ -26,7 +26,7 @@
             <div>
                 <form action="">
                     <div class="search-bar">
-                        <input type="text" id="search">
+                        <input type="text" id="search" placeholder="Search by products...">
                         <!-- <input type="submit"> -->
                         <div class="dropdown">
                             <li>Type to search for products</li>
@@ -35,63 +35,79 @@
                 </form>
             </div>
             <ol class="nav-link">
-                <li><a href="/">Home</a></li>
-                <li>Shop</li>
-                <li>Blog</li>
-                <li>Contact</li>
-                <li>On Sale</li>
+                <div class="nav-dropdown">
+                    <div class="nav-drop-btn"><a href="/">Home</a></div>
+                    <div class="nav-drop-content">content</div>
+                </div>
+                <div class="nav-dropdown">
+                    <div class="nav-drop-btn">Shop</div>
+                    <div class="nav-drop-content">content</div>
+                </div>
+                <div class="nav-dropdown">
+                    <div class="nav-drop-btn">Blog</div>
+                    <div class="nav-drop-content">content</div>
+                </div>
+                <div class="nav-dropdown">
+                    <div class="nav-drop-btn">Contact</div>
+                    <div class="nav-drop-content">content</div>
+                </div>
+                <div class="nav-dropdown">
+                    <div class="nav-drop-btn">On Sale</div>
+                    <div class="nav-drop-content">content</div>
+                </div>
             </ol>
         </div>
         <div class="user">
-           <span class="signin btn"> Sign In</span>/ <span class="register btn">Register</span>
+           <span class="signin btn"> Sign In</span> / <span class="register btn">Register</span>
         </div>
         <div class="location-box">
             <span class="location">India</span><span id="get-location" class="btn"> <i class="fa-solid fa-location-dot"></i></span>
         </div>
-        <a href="/cart.html">
-            <span class="material-symbols-outlined">
-                shopping_bag
-            </span>
+        <a href="/cart.html" class="cart-btn">
+            <div><i class="fa-solid fa-bag-shopping"></i></div>
+            <div class="cart-count">10</div>
         </a>
     </nav>
     
 
     <section class="hero-section">
         <div class="feature-info">
-            <div>
-                <img src="" alt="">
+            <div class="info-box">
+                <div style="background-color: #41cdcf;" class="info-icon">
+                    <i class="fa-solid fa-prescription-bottle"></i>
+                </div>
                 <div class="info-item">
                     <span>Medicine</span>
                     <span>Over 2500 Products</span>
                 </div>
             </div>
 
-            <div>
-                <img src="" alt="">
+            <div class="info-box">
+                <div style="background-color: #f54f9a;" class="info-icon"><i class="fa-solid fa-spa"></i></div>
                 <div class="info-item">
                     <span>Wellness</span>
                     <span>Health Products</span>
                 </div>
             </div>
 
-            <div>
-                <div><i class="fa-solid fa-user-doctor" ></i></div>
+            <div class="info-box">
+                <div style="background-color: #83c847;" class="info-icon"><i class="fa-solid fa-user-doctor" ></i></div>
                 <div class="info-item">
                     <span>Diagnostic</span>
                     <span>Book tests & checkups</span>
                 </div>
             </div>
 
-            <div>
-                <img src="" alt="">
+            <div class="info-box">
+                <div style="background-color: #51acf6;" class="info-icon"><i class="fa-solid fa-heart-pulse"></i></div>
                 <div class="info-item">
                     <span>Health Corner</span>
                     <span>Trending from health experts</span>
                 </div>
             </div>
 
-            <div>
-                <img src="" alt="">
+            <div class="info-box">
+                <div style="background-color: #ffb61b;" class="info-icon"><i class="fa-solid fa-person-booth"></i></div>
                 <div class="info-item">
                     <span>Others</span>
                     <span>More info</span>
@@ -124,8 +140,8 @@
                     <div class="product-info">
                         <div class="category">category</div>
                         <div class="pro-name">Product Name</div>
-                        <div><span>$100</span> <span>$90</span></div>
-                        <button><span>ICON</span><span>Add to Cart</span></button>
+                        <div class="pro-price"><span>$100</span> <span>$90</span></div>
+                        <button class='add-to-cart'><span>ICON</span><span>Add to Cart</span></button>
                     </div>
                 </div>
 
@@ -134,7 +150,7 @@
                     <div class="product-info">
                         <div class="category">category</div>
                         <div class="pro-name">Product Name</div>
-                        <div><span>$100</span> <span>$90</span></div>
+                        <div class="pro-price"><span>$100</span> <span>$90</span></div>
                         <button><span>ICON</span><span>Add to Cart</span></button>
                     </div>
                 </div>
@@ -194,42 +210,52 @@
 
     </section>
 
-    <section>
-        <div class="feature-info">
-            <div>
-                <img src="" alt="">
+    <section ><!--name the class of this section -->
+        <div class="feature-info feature-info-2">
+            <div class="info-box">
+                <div style="background-color: #ffd6b0;" class="info-icon">
+                    <i class="fa-solid fa-truck"></i>
+                </div>
                 <div class="info-item">
                     <span>Free Delivery</span>
                     <span>For all orders over $120</span>
                 </div>
             </div>
 
-            <div>
-                <img src="" alt="">
+            <div class="info-box">
+                <div style="background-color: #beebf6;" class="info-icon">
+                    <i class="fa-regular fa-credit-card"></i>
+                </div>
                 <div class="info-item">
                     <span>Safe Payment</span>
                     <span>100% secure payment</span>
                 </div>
             </div>
 
-            <div>
-                <img src="" alt="">
+            <div class="info-box">
+                <div style="background-color: #d7d7ff;" class="info-icon">
+                    <i class="fa-solid fa-hand-holding-dollar"></i>
+                </div>
                 <div class="info-item">
                     <span>Shop With Confidence</span>
                     <span>High Quality</span>
                 </div>
             </div>
 
-            <div>
-                <img src="" alt="">
+            <div class="info-box">
+                <div style="background-color: #ffdbcd;" class="info-icon">
+                    <i class="fa-solid fa-handshake-angle"></i>
+                </div>
                 <div class="info-item">
                     <span>24/7 Help Center</span>
                     <span>Dedicated 24/7 support</span>
                 </div>
             </div>
 
-            <div>
-                <img src="" alt="">
+            <div class="info-box">
+                <div style="background-color: #d2fae6;" class="info-icon">
+                    <i class="fa-solid fa-clipboard"></i>
+                </div>
                 <div class="info-item">
                     <span>Friendly Services</span>
                     <span>30-day satisfaction guarantee</span>
@@ -330,8 +356,10 @@
         <div class="form-box">
             <h3>Login to your account</h3>
             <form class="login-form">
-                <input type="text" class="login-data" placeholder="email" required>
+                <input type="email" class="login-data" placeholder="email" required>
+                <div class="input-msg"></div>
                 <input type="password" class="login-data" placeholder="password" required>
+                <div class="input-msg"></div>
                 <div>
                     <input type="checkbox" id="remember" class="login-data"><label for="remember">Remember Me</label>
                 </div>
@@ -350,7 +378,7 @@
             <form class="register-form">
                 <input type="text" placeholder="First Name" name="first" class="register-data" required>
                 <div class="input-msg"></div>
-                <input type="text" placeholder="Last Name" class="register-data" required>
+                <input type="text" placeholder="Last Name" name="last" class="register-data" required>
                 <div class="input-msg"></div>
                 <input type="email" placeholder="email" class="register-data" required>
                 <div class="input-msg"></div>

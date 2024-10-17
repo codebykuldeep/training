@@ -11,8 +11,11 @@ function loadProducts(){
                         <div class="product-info">
                             <div class="category">${product.brand}</div>
                             <div class="pro-name">${product.name}</div>
-                            <div><span>$${product.price}</span> <span>$${product.price}</span></div>
-                            <button class='add-to-cart' id=${product.productId}><span>ICON</span><span>Add to Cart</span></button>
+                            <div class="pro-price"><span>$${product.price}</span> <span>$${product.price}</span></div>
+                            <button class='add-to-cart' id=${product.productId}>
+                            <span><i class="fa-solid fa-bag-shopping"></i></span>
+                            <span>Add to Cart</span>
+                            </button>
                         </div>
                      </div>`;
 
