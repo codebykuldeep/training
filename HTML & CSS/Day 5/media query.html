@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        div{
+            height: 30px;
+            border: 1px solid black;
+        }
+        @media (min-width:1024px){
+            .widescreen{
+                background-color: red;
+            }
+        }
+
+        @media (max-width:1024px){
+            .normal{
+                background-color: green;
+            }
+        }
+        @media (orientation:landscape){
+            .landscape{
+                background-color: blue;
+            }
+        }
+        @media (orientation:portrait){
+            .landscape{
+                background-color: tomato;
+            }
+        }
+
+
+
+
+    </style>
+</head>
+<body>
+    <div class="widescreen">widescreen</div>
+    <div class="normal    ">normal    </div>
+    <div class="tablet    ">tablet    </div>
+    <div class="smartphone">smartphone</div>
+    <div class="landscape ">landscape </div>
+    <div class="height    ">height    </div>
+</body>
+</html>
