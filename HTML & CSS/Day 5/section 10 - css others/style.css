@@ -1,0 +1,17 @@
+:root{
+    --main :green;
+}
+.container{
+    --primary : lightblue;
+}
+
+.box{
+    border: 1px solid black;
+    padding: 10px;
+    margin: 20px;
+    color: var(--primary);
+}
+.box-2{
+    color: var(--main);
+}
+
