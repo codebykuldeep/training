@@ -95,18 +95,21 @@ function updateCart(){
 
     if(cartProduct){
         cartProduct.forEach(item =>{
+            let discountPrice =(item.price - (item.price*item.discount)/100).toFixed(2);
             let html =` <article class="cart-item">
                         <div class="item-img">
                             <img src="assets/products/${item.image}" alt="" srcset="">
                         </div>
-                        <div>
+                        <div class='item-detail'>
                             <h3>${item.name}</h3>
+                            <div class='item-detail-1'><span>$${item.price}</span> <span>( -${item.discount}% )</span></div>
+                            <div class='item-detail-2'>$${discountPrice}</div>
                         </div>
-                        <div>
+                        <div >
                             <input type="number" value=${item.quantity} min=0 data-product-id=${item.productId} class='item-count'>
                         </div>
                         <div class="item-price">
-                            $${item.price * item.quantity};
+                            $${(discountPrice * item.quantity).toFixed(2)}
                         </div>
                         <div class="cart-delete btn" data-product-id=${item.productId}>
                             <i class="fa-solid fa-trash"></i>
@@ -134,13 +137,14 @@ function updateBill(){
     let totalamt =0;
     cartProduct.forEach(item=>{
         count +=item.quantity;
-        totalamt +=item.quantity *item.price;
+        let discountPrice =Number((item.price - (item.price*item.discount)/100).toFixed(2));
+        totalamt +=item.quantity * discountPrice;
     })
     let shipAmt = Number((0.05*totalamt).toFixed(2));
     totalProduct.textContent = count.toFixed() ;
     shipping.textContent = shipAmt;
-    billAmount.textContent = totalamt ;
-    totalAmount.textContent= totalamt  + shipAmt;
+    billAmount.textContent = totalamt.toFixed(2) ;
+    totalAmount.textContent= (totalamt  + shipAmt).toFixed(2);
 }
 
 

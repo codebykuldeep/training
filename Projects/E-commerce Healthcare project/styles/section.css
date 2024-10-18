@@ -9,6 +9,32 @@
     justify-content: space-between;
     padding: 20px 2rem;
 }
+.info-box{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    border-left: 1px solid #ddddde;
+    padding-left: 10px;
+}
+.info-box:first-child{
+    border: none;
+}
+.info-icon{
+    width: 40px;
+    height: 40px;
+    background: red;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+
+}
+.info-icon i{
+    color: white;
+} 
+
 
 .info-item{
     display: flex;
@@ -22,6 +48,7 @@
     font-size: 13px;
     color: var(--font-grey);
 }
+/* ---hero image section--*/
 
 .slider-img{
     background-color: inherit;
@@ -33,6 +60,47 @@
     height: auto;
     object-fit: contain;
 }
+.slider{
+    position: relative;
+}
+.slider-text{
+    position: absolute;
+    top: 25%;
+    left: 65%;
+
+    font-weight: 700;
+    color: white;
+    line-height: 1.2;
+}
+.s-text-1{
+    font-size: 2.5rem;
+}
+.s-text-2{
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.s-text-2 button{
+    all: unset;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.s-text-2 button span:first-child{
+    display: inline-block;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    background-color: white;
+    color: black;
+    margin-right: 5px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 
 
@@ -40,12 +108,17 @@
 
 .product-section{
     padding: 45px 0 30px 0;
+    margin-bottom: 30px;
 }
 
 .pro-head{
     display: flex;
     justify-content: space-between;
-    padding: 0 1rem;
+    padding: 0 1rem 0 1.5rem;
+    
+}
+.pro-head h1{
+    font-size: 2rem;
 }
 .pro-slider-btn span{
     margin: 0 10px;
@@ -65,6 +138,7 @@
 
     overflow: hidden;
     scroll-behavior: smooth;
+
 }
 
 .product-container{
@@ -73,6 +147,16 @@
     padding-inline: 15px;
 
     border: 1px solid var(--border);
+    box-shadow: 0px 4px 8px 0 rgba(0, 0, 0, 0.2);
+
+    margin: 20px 0;
+}
+/* .product-container:hover{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
+} */
+
+.wrapper{
+    margin-bottom: 30px;
 }
 .product-container img{
     width: 100%;
@@ -86,10 +170,65 @@
     padding-inline: 15px;
 }
 
+.product-info .category{
+    font-size: 13px;
+    color:var(--font-grey)
+}
+.product-info .pro-name{
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.pro-price span:first-child{
+    font-size: 1.2rem;
+    text-decoration: line-through;
+    color:var(--font-grey)
+}
+.pro-price span:last-child{
+    font-size: 1.4rem;
+    color:var(--font-pink);
+    font-weight: 400
+
+}
+
+
+.add-to-cart{
+    all: unset;
+    cursor: pointer;
+    margin-bottom: 15px;
+
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+}
+.add-to-cart:hover{
+    background-color: var(--btn-color);
+    border-radius: 50px;
+    color: white;
+}
+
+
+
+.add-to-cart span:first-child{
+    margin-right: 5px;
+    font-size: 20px;
+    height: 35px;
+    width: 35px;
+    background-color: var(--btn-color);
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
 
 /* DEAL SECTION */
 .deal-head{
-    padding: 2rem 0;
+    padding: 2rem 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 .deal-section{
     background-image: url('../assets/background1.webp');
@@ -109,6 +248,7 @@
     padding: 30px;
     margin: 0 20px;
 
+    box-shadow: 3px 2px 10px 5px rgba(0, 0, 0, 0.2);
 }
 .deal-img{
     width: 50%;
@@ -119,6 +259,25 @@
     object-fit: contain;
 }
 
+.deal-product-info .add-to-cart span:last-child{
+    padding-right: 10px;
+}
+
+/* SERVICE INFO --- FEATURE INFO 2 */
+.service-info{
+    margin: 2rem 0;
+}
+.feature-info-2 .info-box i{
+    color: black;
+    font-size: 25px;
+}
+.feature-info-2 .info-box{
+    border: none;
+}
+.feature-info-2 .info-icon{
+    width: 50px;
+    height: 50px;
+}
 
 
 /* DOCTOR SECTION */
@@ -126,7 +285,6 @@
 .doc-section{
     display: flex;
     padding: 70px 0;
-    margin-top: 2rem;
     background-color: var(--background);
 }
 .doc-img{
@@ -138,11 +296,75 @@
     object-fit: contain;
 }
 
+.doc-text-head{
+    font-size: 2rem;
+}
+.doc-text-list{
+    margin: 1rem 0;
+}
+.doc-text-list li{
+    list-style: none;
+    padding: 10px 0;
+    
+    display: flex;
+    align-items: center;
+}
+.doc-text-list li span{
+    font-weight: 600;
+    color: var(--font-grey);
+}
+
+.doc-text-list li span:first-child{
+    margin-right: 10px;
+    display: inline-block;
+    color: #4bd7b8;
+    border: 2px solid #4bd7b8;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.doc-text-2{
+    margin: 2rem 0;
+    color: var(--font-grey);
+}
+.doc-text-2 h2{
+    margin: 1rem 0;
+    color: #24aeb1;
+}
+.doc-btn{
+    all: unset;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+
+}
+.doc-btn span:first-child{
+    height: 40px;
+    width: 40px;
+    color: white;
+    font-size: 20px;
+    margin-right: 10px;
+    background-color: var(--btn-color);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.doc-btn span:last-child{
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
 
 /* Testomonial section */
 .testimonial{
     background-image: url('../assets/background-world.webp');
-    padding: 70px 15px;
+    padding: 100px 15px;
 
     display: flex;
     justify-content: space-between;
@@ -151,6 +373,16 @@
 
 .testimonial-content{
     text-align: center;
+}
+
+.review p{
+    padding: 30px 0 50px 0;
+    font-size: 1.75rem;
+    font-weight: 600;
+}
+.review-user span:first-child{
+font-weight: 600;
+margin: 10px 0;
 }
 
 
