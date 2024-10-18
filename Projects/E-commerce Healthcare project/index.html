@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="styles/Footer.css">
     <link rel="stylesheet" href="styles/modal.css">
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=shopping_bag" />
 
 </head>
@@ -118,6 +119,13 @@
             <div class="slider-img">
                 <img src="assets/home-slide1.webp" alt="" srcset="">
             </div>
+            <div class="slider-text">
+                <div class="s-text-1"><span>Flat 25% Off</span><br><span>Medicine Order</span></div>
+                <div class="s-text-2">
+                    <span>Code : Save25</span> 
+                    <button><span><i class="fa-solid fa-bag-shopping"></i></span><span>Shop Now</span></button>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -185,11 +193,17 @@
                     <img src="assets/products/steam-machine.jpg" alt="">
                 </div>
 
-                <div class="deal-product-info">
+                <!-- <div class="deal-product-info">
                     <div class="category">category</div>
                     <div class="pro-name">Product Name</div>
                     <div><span>$100</span> <span>$90</span></div>
                     <button><span>ICON</span><span>Add to Cart</span></button>
+                </div> -->
+                <div class="product-info">
+                    <div class="category">category</div>
+                    <div class="pro-name">Product Name</div>
+                    <div class="pro-price"><span>$100</span> <span>$90</span></div>
+                    <button class='add-to-cart'><span>ICON</span><span>Add to Cart</span></button>
                 </div>
             </article>
 
@@ -210,7 +224,7 @@
 
     </section>
 
-    <section ><!--name the class of this section -->
+    <section class="service-info"><!--name the class of this section -->
         <div class="feature-info feature-info-2">
             <div class="info-box">
                 <div style="background-color: #ffd6b0;" class="info-icon">
@@ -268,18 +282,20 @@
         <div class="doc-img">
             <img src="assets/doc-img.webp" alt="" srcset="">
         </div>
-        <div>
-            <h1>How to order medicines on Medilazar? It’s Simple.</h1>
-            <ol>
-                <li>Upload valid Prescription</li>
-                <li>Receive a confirmation call</li>
-                <li>Delivery at your door step</li>
+        <div class="doc-text">
+            <h1 class="doc-text-head">How to order medicines<br> on Medilazar? It’s Simple.</h1>
+            <ol class="doc-text-list">
+                <li><span>1</span><span>Upload valid Prescription</span></li>
+                <li><span>2</span><span>Receive a confirmation call</span></li>
+                <li><span>3</span><span>Delivery at your door step</span></li>
             </ol>
-            <h3>Don't have a Prescription? Don't worry!</h3>
+            <div class="doc-text-2">
+                <h2>Don't have a Prescription? Don't worry!</h2>
             <p>
                 Simply search & add the medicines OR get a consultation from a Medilazar doctor
             </p>
-            <button><span>Arrow</span>About US<span</button>
+            </div>
+            <button class="doc-btn"><span><i class="fa-solid fa-arrow-right"></i></span><span>About US</span></button>
         </div>
     </section>
 
@@ -288,14 +304,14 @@
     <section class="testimonial">
         <div><i class="fa-solid fa-arrow-left"></i></div>
         <div class="testimonial-content">
-            <div>
+            <div class="review">
                 <img src="assets/rating.png" alt="">
                 <p> Very reliable always willing to help nothing is too much trouble, will 
                     <br>
                     always go the extra mile to help.
                 </p>
             </div>
-            <div>
+            <div class="review-user">
                 <span>James Lee</span><br><span>October 1, 2024</span>
             </div>
         </div>
@@ -312,8 +328,8 @@
 
                 <form action="">
                     <div class="subscribe">
-                        <input type="text">
-                        <input type="submit" value="Subscribe">
+                        <input type="email" placeholder="Your email address">
+                        <button type="submit" value="Subscribe"><span>Subscribe</span> <span><i class="fa-solid fa-arrow-right"></i></span> </button>
                     </div>
                 </form>
         </div>
@@ -406,7 +422,7 @@
     <script src="scripts/searchbar.js"></script>
     <script src="scripts/slider.js"></script>
     <script src="scripts/location.js"></script>
-    <script src="https://kit.fontawesome.com/0af408009a.js" crossorigin="anonymous"></script>
+    <!-- <script src="https://kit.fontawesome.com/0af408009a.js" crossorigin="anonymous"></script> -->
 
 </body>
 </html>

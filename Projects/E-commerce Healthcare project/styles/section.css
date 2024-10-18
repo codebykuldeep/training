@@ -48,6 +48,7 @@
     font-size: 13px;
     color: var(--font-grey);
 }
+/* ---hero image section--*/
 
 .slider-img{
     background-color: inherit;
@@ -58,6 +59,47 @@
     width: 100%;
     height: auto;
     object-fit: contain;
+}
+.slider{
+    position: relative;
+}
+.slider-text{
+    position: absolute;
+    top: 25%;
+    left: 65%;
+
+    font-weight: 700;
+    color: white;
+    line-height: 1.2;
+}
+.s-text-1{
+    font-size: 2.5rem;
+}
+.s-text-2{
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.s-text-2 button{
+    all: unset;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.s-text-2 button span:first-child{
+    display: inline-block;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    background-color: white;
+    color: black;
+    margin-right: 5px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 
@@ -72,7 +114,11 @@
 .pro-head{
     display: flex;
     justify-content: space-between;
-    padding: 0 1rem;
+    padding: 0 1rem 0 1.5rem;
+    
+}
+.pro-head h1{
+    font-size: 2rem;
 }
 .pro-slider-btn span{
     margin: 0 10px;
@@ -102,6 +148,8 @@
 
     border: 1px solid var(--border);
     box-shadow: 0px 4px 8px 0 rgba(0, 0, 0, 0.2);
+
+    margin: 20px 0;
 }
 /* .product-container:hover{
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
@@ -167,6 +215,7 @@
     height: 35px;
     width: 35px;
     background-color: var(--btn-color);
+    color: white;
 
     display: flex;
     align-items: center;
@@ -176,7 +225,10 @@
 
 /* DEAL SECTION */
 .deal-head{
-    padding: 2rem 0;
+    padding: 2rem 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 .deal-section{
     background-image: url('../assets/background1.webp');
@@ -196,6 +248,7 @@
     padding: 30px;
     margin: 0 20px;
 
+    box-shadow: 3px 2px 10px 5px rgba(0, 0, 0, 0.2);
 }
 .deal-img{
     width: 50%;
@@ -206,7 +259,14 @@
     object-fit: contain;
 }
 
-/* FEATURE INFO 2 */
+.deal-product-info .add-to-cart span:last-child{
+    padding-right: 10px;
+}
+
+/* SERVICE INFO --- FEATURE INFO 2 */
+.service-info{
+    margin: 2rem 0;
+}
 .feature-info-2 .info-box i{
     color: black;
     font-size: 25px;
@@ -225,7 +285,6 @@
 .doc-section{
     display: flex;
     padding: 70px 0;
-    margin-top: 2rem;
     background-color: var(--background);
 }
 .doc-img{
@@ -237,11 +296,75 @@
     object-fit: contain;
 }
 
+.doc-text-head{
+    font-size: 2rem;
+}
+.doc-text-list{
+    margin: 1rem 0;
+}
+.doc-text-list li{
+    list-style: none;
+    padding: 10px 0;
+    
+    display: flex;
+    align-items: center;
+}
+.doc-text-list li span{
+    font-weight: 600;
+    color: var(--font-grey);
+}
+
+.doc-text-list li span:first-child{
+    margin-right: 10px;
+    display: inline-block;
+    color: #4bd7b8;
+    border: 2px solid #4bd7b8;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.doc-text-2{
+    margin: 2rem 0;
+    color: var(--font-grey);
+}
+.doc-text-2 h2{
+    margin: 1rem 0;
+    color: #24aeb1;
+}
+.doc-btn{
+    all: unset;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+
+}
+.doc-btn span:first-child{
+    height: 40px;
+    width: 40px;
+    color: white;
+    font-size: 20px;
+    margin-right: 10px;
+    background-color: var(--btn-color);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.doc-btn span:last-child{
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
 
 /* Testomonial section */
 .testimonial{
     background-image: url('../assets/background-world.webp');
-    padding: 70px 15px;
+    padding: 100px 15px;
 
     display: flex;
     justify-content: space-between;
@@ -250,6 +373,16 @@
 
 .testimonial-content{
     text-align: center;
+}
+
+.review p{
+    padding: 30px 0 50px 0;
+    font-size: 1.75rem;
+    font-weight: 600;
+}
+.review-user span:first-child{
+font-weight: 600;
+margin: 10px 0;
 }
 
 

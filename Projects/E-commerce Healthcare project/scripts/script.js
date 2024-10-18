@@ -39,12 +39,16 @@ function loadDealProducts(){
                         <img src="assets/products/${productData[x].image}" alt="">
                     </div>
 
-                    <div class="deal-product-info">
-                        <div class="category">${productData[x].brand}</div>
-                        <div class="pro-name">${productData[x].name}</div>
-                        <div><span>$${productData[x].price}</span> <span>$${productData[x].price}</span></div>
-                        <button class='add-to-cart' id=${productData[x].productId}><span>ICON</span><span>Add to Cart</span></button>
-                    </div>
+                    
+                    <div class="deal-product-info product-info">
+                            <div class="category">${productData[x].brand}</div>
+                            <div class="pro-name">${productData[x].name}</div>
+                            <div class="pro-price"><span>$${productData[x].price}</span> <span>$${productData[x].price}</span></div>
+                            <button class='add-to-cart' id=${productData[x].productId}>
+                            <span><i class="fa-solid fa-bag-shopping"></i></span>
+                            <span>Add to Cart</span>
+                            </button>
+                        </div>
                 </article>`;
 
         dealList.innerHTML +=html;
@@ -53,3 +57,19 @@ function loadDealProducts(){
 }
 
 loadDealProducts();
+
+
+
+
+
+/*
+
+<div class="deal-product-info">
+                        <div class="category">${productData[x].brand}</div>
+                        <div class="pro-name">${productData[x].name}</div>
+                        <div><span>$${productData[x].price}</span> <span>$${productData[x].price}</span></div>
+                        <button class='add-to-cart' id=${productData[x].productId}><span>ICON</span><span>Add to Cart</span></button>
+                    </div>
+
+
+*/

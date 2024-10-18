@@ -3,6 +3,10 @@
     padding: 0;
     box-sizing: border-box;
 }
+@font-face {
+  font-family: compass;
+  src: url('../assets/Compass.ttf');
+}
 
 :root{
     --background :#f0f9fb;
@@ -11,6 +15,8 @@
     --font-pink :#eb3a7b;
     --btn-color:#24aeb1;
     --cart-background:#f6f6f7;
+    --font-black:#222;
+    --cart-border:#dfdfdf;
 }
 
 .material-symbols-outlined {
@@ -23,6 +29,7 @@
 
 html{
   scroll-behavior: smooth;
+  /* font-family: compass; */
 }
 
 a{
