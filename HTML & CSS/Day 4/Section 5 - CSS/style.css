@@ -1,0 +1,13 @@
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+h2 {
+  color: red;
+  font-size: 30px;
+}
+
+.container {
+  max-width: 600px;
+  margin: 100px auto;
+}
