@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h3>Audio</h3>
+    <!-- <audio src="./assets/song1.mp3" type="audio/mp3" controls autoplay></audio> -->
+
+    <audio src="./assets/song1.mp3" type="audio/mp3" controls loop></audio>
+
+    <audio controls>
+      <source src="./assets/song1.mp3" type="audio/mp3" />
+      <p>Audio player not supported</p>
+    </audio>
+
+    <figure>
+      <figcaption>Audio for Playing</figcaption>
+      <audio controls>
+        <source src="./assets/song1.mp3" type="audio/mp3" />
+        <p>Audio player not supported</p>
+      </audio>
+      <a href="./assets/song1.mp3">Download</a>
+    </figure>
+
+    <h3>Video</h3>
+    <video
+      src="./assets/video1.mov"
+      type="video/quicktime"
+      controls
+      width="300px"
+      height="200px"
+    ></video>
+
+    <h3>Image Map</h3>
+    <img src="./assets/computer.jpg" alt="" srcset="" usemap="#computermap" />
+    <map name="computermap">
+      <area
+        shape="rect"
+        coords="34,44,270,350"
+        href="computer.html"
+        alt="computer"
+      />
+      <area
+        shape="circle"
+        coords="337,300,45"
+        href="coffee.html"
+        alt="coffee"
+      />
+    </map>
+  </body>
+</html>
