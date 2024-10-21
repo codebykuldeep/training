@@ -13,8 +13,10 @@ body{
     background-color: rgba(0, 0, 0, 0.6);
     backdrop-filter: blur(3px);
     width: 100%;
-    height: 100%;
+    height: 100vh;
     z-index: 5;
+
+    
 
     
 }
@@ -29,10 +31,11 @@ body{
 
 }
 
+/*FORM COMMON PROPERTIES*/
 
 .form-close-box{
     text-align: right;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid var(--border);
     padding:10px 20px;
 }
 
@@ -49,6 +52,44 @@ body{
     gap: 15px;
 }
 
+
+/*LOGIN FORM*/
+
+.close-modal{
+    all: unset;
+    font-size: 20px;
+    cursor: pointer;
+}
+.form-box h3{
+    padding: 0 0 2rem 0;
+}
+.form-box input{
+    border: none;
+    border-bottom: 1px solid var(--border);
+    font-size: 1.1rem;
+    padding: 10px 0 10px 5px ;
+}
+.form-box input:focus{
+    outline: 0;
+}
+
+.form-box button[type='submit']{
+    all: unset;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: inherit;
+    padding: 0.5rem 0;
+    color: white;
+    text-align: center;
+    background-color: var(--font-black);
+}
+
+.form-box button[type='submit']:hover{
+    background-color: var(--btn-color);
+}
+.input-msg,.login-msg{
+    color: #eb5555;
+}
 
 
 

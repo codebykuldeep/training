@@ -58,7 +58,8 @@ const validateForm = (inputDomArray,inputMsg,checkbox) => {
   
   let result = true;
   inputDomArray.forEach((inputElement, index) => {
-   
+    const errorBorderColor ="#eb5555";
+    const borderProperty =`1px solid ${errorBorderColor}`;
 
     if (inputElement.type === "text") {
       let testPattern = /^[A-Za-z]+$/;
@@ -66,7 +67,7 @@ const validateForm = (inputDomArray,inputMsg,checkbox) => {
       let text = inputElement.value;
       
       if (!testPattern.test(text)) {
-        inputElement.style.border = "1px solid red";
+        inputElement.style.borderBottom = borderProperty;
         result = false;
 
         if (text.length === 0) {
@@ -84,7 +85,7 @@ const validateForm = (inputDomArray,inputMsg,checkbox) => {
       let text = inputElement.value;
      
       if (!testPattern.test(text)) {
-        inputElement.style.border = "1px solid red";
+        inputElement.style.borderBottom = borderProperty;
         result = false;
 
         if (text.length === 0) {
@@ -101,7 +102,7 @@ const validateForm = (inputDomArray,inputMsg,checkbox) => {
       let text = inputElement.value;
       
       if (!testPattern.test(text)) {
-        inputElement.style.border = "1px solid red";
+        inputElement.style.borderBottom = borderProperty;
         result = false;
 
         if (text.length === 0) {
@@ -115,7 +116,7 @@ const validateForm = (inputDomArray,inputMsg,checkbox) => {
     }
     if (checkbox && inputElement.type === "checkbox") {
       result = inputElement.checked;
-      inputElement.parentNode.children[1].style.color = "red";
+      inputElement.parentNode.children[1].style.color = errorBorderColor;
     }
   });
 
@@ -143,6 +144,10 @@ loginSubmitBtn.addEventListener("click", (e) => {
 
       UpdateUser();
       handleModal(loginModal, overlay);
+    }
+    else{
+      const loginMsg = document.querySelector('.login-msg');
+      loginMsg.textContent = `Please check your credentials`
     }
   }
 });
@@ -177,11 +182,21 @@ registerSubmitBtn.addEventListener("click", (e) => {
 });
 
 registerInput.forEach((inpElement,index) => {
-  const inputMsg = document.querySelectorAll(".input-msg");
+  const inputMsg = document.querySelectorAll(".register-form .input-msg");
   inpElement.addEventListener("focus", () => {
-    console.log(index);
     
     if(inpElement.type!== 'checkbox') inputMsg[index].textContent='';
-    inpElement.style.border = "1px solid gray";
+    inpElement.style.border ='none'
+    inpElement.style.borderBottom = "1px solid var(--border)";
+  });
+});
+
+loginInput.forEach((inpElement,index) => {
+  const inputMsg = document.querySelectorAll(".login-form .input-msg");
+  inpElement.addEventListener("focus", () => {
+    
+    if(inpElement.type!== 'checkbox') inputMsg[index].textContent='';
+    inpElement.style.border ='none'
+    inpElement.style.borderBottom = "1px solid var(--border)";
   });
 });
