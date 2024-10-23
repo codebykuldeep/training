@@ -1,0 +1,82 @@
+:root{
+    --primary-color:#b0d2e0;
+    --fade-color:#6c757d;
+}
+
+body{
+    font-family: 'Poppins',sans-serif;
+}
+.underline{
+    height: 5px;
+    width: 64px;
+    margin: 0 auto;
+    background-color: var(--primary-color);
+}
+/* NAVBAR  */
+
+.navbar-brand img{
+    width: 90px;
+}
+
+.nav-item{
+    cursor: pointer;
+}
+
+
+/* HERO  */
+.hero{
+    font-family: 'DynaPuff',sans-serif;
+    width: 100%;
+    height: 100vh;
+    background:var(--primary-color) url('./assets/shopping-bag-cart.jpg') center center/cover no-repeat;
+    position: relative;
+}
+
+.hero .container{
+    height: 80%;
+    gap: 10px;
+}
+.hero .frame-decoration{
+    position: absolute;
+    width: 100%;
+    height: 100px;
+    bottom: 0;
+    left: 0;
+}
+
+
+/* Category */
+
+.category-item img{
+    width: 100px;
+}
+
+/* PRODUCT */
+.product-container .card{
+    padding: 0;
+}
+.product-container .card-subtitle{
+    color: var(--fade-color);
+}
+.product-container .price{
+    font-weight: 600;
+}
+
+.product-container .img-box{
+    width: 150px;
+    height: 150px;
+}
+.product-container img{
+    width: 140px;
+    height: 140px;
+    object-fit: contain;
+    margin: 5px;
+}
+
+
+@media(max-width:1024px){
+    .hero{
+        background: var(--primary-color);
+        height: 60vh;
+    }
+}
