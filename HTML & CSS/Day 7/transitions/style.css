@@ -1,0 +1,13 @@
+button{
+    all:unset;
+    cursor: pointer;
+    border:1px solid blue;
+    background-color: rgb(214, 241, 241);
+    /* transition:background-color 4s ease-in-out; */
+    transition: all 0.8s smooth;
+}
+
+button:hover{
+    background-color: blue;
+    width: 100%;
+}
