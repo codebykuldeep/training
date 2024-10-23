@@ -73,6 +73,12 @@ body{
     margin: 5px;
 }
 
+/* Modal  */
+.modal-body img{
+    width: 60%;
+    height: 300px;
+}
+
 
 @media(max-width:1024px){
     .hero{

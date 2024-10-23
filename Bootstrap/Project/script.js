@@ -6,21 +6,25 @@ const productContainer =document.querySelector('.product-container')
 const productList =document.querySelector('.product-list')
 const loadBtn = document.getElementById('get-more');
 
+
+
+let productCardArray ;
+
 const getData = async() =>{
     const res = await fetch('https://fakestoreapi.com/products');
     const data = await res.json();
-    console.log(data);
+    
     return data;
 }
 
 const insertData = async()=>{
     const data = await getData();
-    console.log(data);
+    
     
     const arr = data.slice(productCount,productCount+6);
     productCount+=6;
     arr.forEach(item => {
-        let html =`<div class="col">
+        let html =`<div data-bs-toggle="modal"  data-bs-target="#Modal" class="col product-card" data-id=${item.id}>
                     <div class="card flex-row">
                       <div class='img-box'><img src="${item.image}" alt="..." /></div>
                       <div class="card-body  d-flex flex-column justify-content-between">
@@ -40,6 +44,8 @@ const insertData = async()=>{
                     productList.insertAdjacentHTML('beforeend',html);
         
     });
+
+    productCardArray =document.querySelectorAll('.product-card');
 }
 
 const UpdateUI = async()=>{
@@ -64,3 +70,5 @@ loadBtn.addEventListener('click',async ()=>{
 })
 
 UpdateUI();
+
+
