@@ -5,11 +5,30 @@
 
 body{
     font-family: 'Poppins',sans-serif;
+    
 }
 .underline{
     height: 5px;
     width: 64px;
     margin: 0 auto;
+    background-color: var(--primary-color);
+}
+
+/* SCROLL BAR  */
+::-webkit-scrollbar{
+    display: none;
+}
+.scrollbar{
+    position: fixed;
+    background-color: #f1f1f1;
+    width: 10px;
+    height: 100vh;
+    top: 0;
+    right: 0;
+    z-index: 2000 ;
+    transition: height 0.6s smooth;
+}
+#progress{
     background-color: var(--primary-color);
 }
 /* NAVBAR  */
@@ -20,8 +39,22 @@ body{
 
 .nav-item{
     cursor: pointer;
+    font-weight: 600;
+    
+}
+.nav-item .nav-link:hover{
+    color: var(--primary-color);
 }
 
+/* Search Bar */
+.searchbar{
+    position: relative;
+}
+#result{
+    position: absolute;
+    top: 0;
+    height: 300px;
+}
 
 /* HERO  */
 .hero{
@@ -54,6 +87,7 @@ body{
 /* PRODUCT */
 .product-container .card{
     padding: 0;
+    transition: all 0.3s ease-in;
 }
 .product-container .card-subtitle{
     color: var(--fade-color);
@@ -65,12 +99,18 @@ body{
 .product-container .img-box{
     width: 150px;
     height: 150px;
+    
 }
 .product-container img{
-    width: 140px;
-    height: 140px;
+    width: 120px;
+    height: 120px;
     object-fit: contain;
     margin: 5px;
+    
+    
+}
+.product-container .card:hover img{
+    transform: scale(1.05);
 }
 
 /* Modal  */
@@ -85,4 +125,15 @@ body{
         background: var(--primary-color);
         height: 60vh;
     }
+}
+@media (max-width:768px){
+    .scrollbar{
+        display: none;
+    }
+    nav form .searchbar{
+        width: 70% !important;
+    }
+    /* nav form input{
+        width: 100%;
+    } */
 }

@@ -2,11 +2,11 @@ const searchbar =document.getElementById('search');
 
 
 const searchProducts =async()=>{
-    console.log('Fetching API...');
-    
     let text =searchbar.value;
     if(!text.length) return;
-    const data = await getData();
+
+    console.log('Fetching API...');
+    const data = await getData(API_URL);
 
     const result =[];
 
