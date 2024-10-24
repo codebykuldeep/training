@@ -13,9 +13,10 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <!-- <h1>Hello, world!</h1> -->
-    <h1>Container row and col</h1>
+    <h1>Hello, world!</h1>
+
     <div class="container">
+      <h2>Container row and col</h2>
       <div class="row">
         <div class="col">
           <div class="box"></div>
@@ -44,8 +45,8 @@
       explicabo!
     </div>
 
-    <h2>grid</h2>
     <div class="container">
+      <h2>grid</h2>
       <div class="row row-cols-2 gy-lg-5">
         <div class="col">
           <div class="box"></div>
@@ -62,32 +63,399 @@
       </div>
     </div>
 
-    <h2>Table</h2>
-    <table>
-      <thead>
-        <tr>
-          <th>Name</th>
-          <th>Age</th>
-          <th>Gender</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          James
-        </tr>
-        <tr>
-          25
-        </tr>
-        <tr>
-          Male
-        </tr>
-      </tbody>
-    </table>
+    <div class="container">
+      <h2>Table</h2>
+      <div class="table-responsive">
+        <table class="table table-striped-columns table-hover">
+          <thead>
+            <tr class="table-success">
+              <th>Name</th>
+              <th>Age</th>
+              <th>Gender</th>
+            </tr>
+          </thead>
+          <tbody class="table-group-divider">
+            <tr>
+              <td class="table-danger">john</td>
+              <td>30</td>
+              <td>male</td>
+            </tr>
+            <tr>
+              <td>james</td>
+              <td>25</td>
+              <td>male</td>
+            </tr>
+            <tr>
+              <td>mia</td>
+              <td>25</td>
+              <td>female</td>
+            </tr>
+            <tr>
+              <td>mia</td>
+              <td>25</td>
+              <td>female</td>
+            </tr>
+            <tr class="table-active">
+              <td>mia</td>
+              <td>25</td>
+              <td>female</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="container">
+      <h2>form</h2>
+      <form action="">
+        <label for="name" class="form-label">Email</label>
+        <input type="text" id="name" class="form-control" />
+
+        <input
+          type="text"
+          id="name"
+          value="email@gmail.com"
+          class="form-control form-control-plaintext"
+        />
+        <input type="range" value="email@gmail.com" class="form-range" />
+
+        <select name="" class="form-select">
+          <option value="">one</option>
+          <option value="">two</option>
+          <option value="">three</option>
+        </select>
+        <label for="check" class="form-check-label">Checkbox</label>
+        <input type="checkbox" id="check" class="form-check-input" />
+
+        <div class="form-check form-switch">
+          <label for="check" class="form-check-label">Checkbox</label>
+          <input type="checkbox" id="check" class="form-check-input" />
+        </div>
+
+        <div class="input-group">
+          <input type="text" class="form-control" />
+          <input type="text" class="form-control" />
+        </div>
+        <div class="input-group input-group-lg">
+          <div class="input-group-text">Amount</div>
+          <input type="text" class="form-control" />
+          <button class="btn btn-primary">+</button>
+        </div>
+        <button>Submit</button>
+      </form>
+
+      <form class="form2" novalidate>
+        <div class="form-floating">
+          <input
+            type="email"
+            id="email2"
+            class="form-control"
+            placeholder="Email here"
+            required
+          />
+          <label for="email2" class="form-label">Email</label>
+          <div class="invalid-feedback">Invalid</div>
+          <div class="valid-feedback">valid</div>
+        </div>
+        <button>Submit</button>
+      </form>
+    </div>
+
+    <div class="container">
+      <h2>buttons</h2>
+      <button class="btn">Test</button>
+      <button class="btn btn-primary">Test</button>
+      <a class="btn btn-link">Test</a>
+      <a class="btn btn-primary disabled">Test</a>
+      <button class="btn btn-primary btn-sm">Test</button>
+      <button class="btn btn-outline-secondary">Test</button>
+      <button class="btn btn-outline-primary active" data-bs-toggle="button">
+        Test
+      </button>
+
+      <div class="btn-group">
+        <button class="btn btn-outline-primary">Test</button>
+        <button class="btn btn-outline-primary">Test</button>
+        <button class="btn btn-outline-primary">Test</button>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="alert alert-success alert-dismissible fade show" role="alert">
+        Alert
+        <button
+          class="btn-close"
+          aria-label="close"
+          data-bs-dismiss="alert"
+        ></button>
+      </div>
+    </div>
+
+    <div class="container">
+      <h2>Card</h2>
+      <div class="card" style="width: 300px">
+        <img class="card-img-top" src="https://placehold.co/400" alt="" />
+        <div class="card-body">
+          <h2 class="card-title">Title</h2>
+          <h3 class="card=subtitle">Subtitle</h3>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione
+          quibusdam beatae aspernatur dolor facere, est
+        </div>
+      </div>
+
+      <div class="card" style="width: 300px">
+        <img class="card-img-top" src="https://placehold.co/400" alt="" />
+        <div class="card-body card-img-overlay">
+          <h2 class="card-title">Title</h2>
+          <h3 class="card-subtitle">Subtitle</h3>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione
+          quibusdam beatae aspernatur dolor facere, est
+        </div>
+      </div>
+
+      <div class="card" style="width: 300px">
+        <div class="card-header">HEader</div>
+        <div class="card-body">
+          <h2 class="card-title">Title</h2>
+          <h3 class="card-subtitle">Subtitle</h3>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione
+          quibusdam beatae aspernatur dolor facere, est
+        </div>
+        <div class="card-footer">footer</div>
+      </div>
+
+      <div class="card-group">
+        <div class="card" style="width: 300px">
+          <div class="card-header">HEader</div>
+          <div class="card-body">
+            <h2 class="card-title">Title</h2>
+            <h3 class="card-subtitle">Subtitle</h3>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione
+            quibusdam beatae aspernatur dolor facere, est
+          </div>
+          <div class="card-footer">footer</div>
+        </div>
+        <div class="card" style="width: 300px">
+          <div class="card-header">HEader</div>
+          <div class="card-body">
+            <h2 class="card-title">Title</h2>
+            <h3 class="card-subtitle">Subtitle</h3>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione
+            quibusdam beatae aspernatur dolor facere, est
+          </div>
+          <div class="card-footer">footer</div>
+        </div>
+        <div class="card" style="width: 300px">
+          <div class="card-header">HEader</div>
+          <div class="card-body">
+            <h2 class="card-title">Title</h2>
+            <h3 class="card-subtitle">Subtitle</h3>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione
+            quibusdam beatae aspernatur dolor facere, est
+          </div>
+          <div class="card-footer">footer</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <button
+        class="btn btn-primary"
+        data-bs-toggle="modal"
+        data-bs-target="#modal"
+      >
+        Open
+      </button>
+      <div class="modal" id="modal">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1>Header</h1>
+              <button
+                class="btn-close"
+                data-bs-dismiss="modal"
+                data-bs-target="#modal"
+              ></button>
+            </div>
+            <div class="modal-body">Body</div>
+            <div class="modal-footer">
+              Footer
+              <button class="btn btn-primary" data-bs-dismiss="modal">
+                Close
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <h2>Toogle</h2>
+      <button
+        class="btn btn-primary"
+        data-bs-toggle="collapse"
+        data-bs-target="#row"
+        aria-expanded="true"
+        aria-controls="row"
+      >
+        Toggle
+      </button>
+      <div class="row collapse" id="row">
+        <div class="col">
+          <div class="box"></div>
+        </div>
+      </div>
+    </div>
+
+    <nav class="navbar navbar-expand navbar-dark bg-dark">
+      <div class="container">
+        <a href="#" class="navbar-brand">Brand</a>
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page">Link</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page">shop</a>
+          </li>
+        </ul>
+        <div class="navbar-text">Test</div>
+      </div>
+    </nav>
+
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+      <div class="container">
+        <a href="#" class="navbar-brand">Brand2</a>
+
+        <button
+          class="nabvbar-toggler"
+          data-bs-toggle="collapse"
+          data-bs-target="#nav"
+        >
+          <span class="navbar-toggler-icon bg-dark"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="nav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page">Link</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page">shop</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <h2>color utility</h2>
+      <div class="card text-bg-dark bg-opacity-25">
+        <div class="card-body">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem quam
+          necessitatibus iure iste sunt dolorum rerum debitis vero asperiores
+          doloremque.
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-body">
+          <a href="" class="link-danger">Click ME</a>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem quam
+          necessitatibus iure iste sunt dolorum rerum debitis vero asperiores
+          doloremque.
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <h2>stack utility</h2>
+      <div class="card">
+        <div class="card-body">
+          <div class="hstack gap-1">
+            <div class="box" style="width: 100%"></div>
+            <div class="box" style="width: 100%"></div>
+            <div class="box" style="width: 100%"></div>
+            <div class="box" style="width: 100%"></div>
+            <div class="box" style="width: 100%"></div>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-body">
+          <div class="vstack">
+            <div class="box" style="width: 100%"></div>
+            <div class="box" style="width: 100%"></div>
+            <div class="box" style="width: 100%"></div>
+            <div class="box" style="width: 100%"></div>
+            <div class="box" style="width: 100%"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <h2>border utility</h2>
+      <div class="border border-3 border-primary rounded">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut iusto
+        reiciendis mollitia voluptatem neque impedit omnis expedita, unde velit
+        eius optio, eos perspiciatis autem est!
+      </div>
+      <div class="border border-3 border-primary rounded-circle">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut iusto
+        reiciendis mollitia voluptatem neque impedit omnis expedita, unde velit
+        eius optio, eos perspiciatis autem est!
+      </div>
+      <div class="border border-3 border-primary rounded-5">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut iusto
+        reiciendis mollitia voluptatem neque impedit omnis expedita, unde velit
+        eius optio, eos perspiciatis autem est!
+      </div>
+    </div>
+
+    <div class="container">
+      <h2>display utility</h2>
+      <div class="d-block d-lg-none">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut iusto
+        reiciendis mollitia voluptatem neque impedit omnis expedita, unde velit
+        eius optio, eos perspiciatis autem est!
+      </div>
+      <div class="d-lg-block d-none border">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut iusto
+        reiciendis mollitia voluptatem neque impedit omnis expedita, unde velit
+        eius optio, eos perspiciatis autem est!
+      </div>
+    </div>
+
+    <div class="container">
+      <h2>flexbox utility</h2>
+      <div class="d-flex justify-content-between align-items-center">
+        <div class="box" style="width: 100px"></div>
+        <div class="box" style="width: 100px"></div>
+        <div class="box" style="width: 100px"></div>
+        <div class="box" style="width: 100px"></div>
+        <div class="box" style="width: 100px"></div>
+      </div>
+    </div>
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
+
+    <script>
+      const form = document.querySelector(".form2");
+      form.addEventListener("submit", (e) => {
+        if (!form.checkValidity()) {
+          e.preventDefault();
+        }
+
+        form.classList.add("was-validated");
+      });
+    </script>
   </body>
 </html>
