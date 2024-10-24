@@ -8,6 +8,7 @@
     display: flex;
     justify-content: space-between;
     padding: 20px 2rem;
+    flex-wrap: wrap;
 }
 .info-box{
     display: flex;
@@ -284,16 +285,23 @@
 
 .doc-section{
     display: flex;
+    justify-content: space-around;
     padding: 70px 0;
     background-color: var(--background);
+    flex-wrap: wrap;
 }
 .doc-img{
-    width: 50%;
+    width: 45%;
     box-sizing: border-box;
 }
 
 .doc-img img{
+    width: 100%;
     object-fit: contain;
+}
+.doc-text{
+    width: 45%;
+    margin-left: 1rem;
 }
 
 .doc-text-head{
@@ -399,4 +407,5 @@ margin: 10px 0;
     background-color: var(--background);
     border-radius: 50%;
     cursor: pointer;
+    z-index: 99;
 }
