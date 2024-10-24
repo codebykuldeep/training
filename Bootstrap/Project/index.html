@@ -25,25 +25,24 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    
     <nav
       class="navbar sticky-top navbar-expand-md bg-body-tertiary ps-2 pe-lg-5"
     >
-      <div class="container-fluid">
+      <div class="container-fluid flex-nowrap">
         <div class="d-flex">
           <a href="#" class="navbar-brand"
             ><img src="assets/logo.png" alt="" srcset=""
           /></a>
-          <form class="ms-lg-5 h-50 w-30 mt-2" role="search">
+          <form class="d-inline mt-2" role="search">
             <div class="searchbar">
               <input
-              class="form-control w-sm-20"
-              type="search"
-              placeholder="Search"
-              aria-label="Search"
-              id="search"
-            />
-            <div id="result"></div>
+                class="form-control w-sm-20"
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+                id="search"
+              />
+              <div id="result"></div>
             </div>
             <!-- <button class="btn btn-primary" type="submit">Search</button> -->
           </form>
@@ -88,28 +87,10 @@
       </div>
     </nav>
 
-
     <div class="scrollbar">
       <div id="progress"></div>
     </div>
 
-    <!-- <main>
-        <div class="spinner-border spinner-border-lg" role="status">
-            <span class="visually-hidden">Loading...</span>
-          </div>
-    </main> -->
-
-    <!-- <section class="Products container">
-        <div class="card" style="width: 300px">
-            <img class="card-img-bottom" src="https://placehold.co/400" alt="" />
-            <div class="card-body">
-              <h2 class="card-title">Title</h2>
-              <h3 class="card=subtitle">Subtitle</h3>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione
-              quibusdam beatae aspernatur dolor facere, est
-            </div>
-          </div>
-    </section> -->
 
     <section class="hero">
       <div
@@ -156,41 +137,67 @@
           <h1>Category</h1>
           <div class="underline"></div>
         </div>
-        <div class="d-flex justify-content-evenly text-center">
-          <div class="category-item" data-category="">
-            <div>
-              <img class="rounded-circle" src="./assets/jew.jfif" alt="" />
+        <div id="carousel" class="carousel slide d-flex">
+          <button class="sliderbtn"
+            type="button"
+            data-bs-target="#carousel"
+            data-bs-slide="prev"><</button>
+    
+          <div class="carousel-inner">
+            
+            <div class="carousel-item active">
+              <div class="d-flex justify-content-evenly text-center">
+                <div class="category-item" data-category="">
+                  <div>
+                    <img class="rounded-circle" src="./assets/jew.jfif" alt="" />
+                  </div>
+                  <div>All Products</div>
+                </div>
+                <div class="category-item" data-category="/category/electronics">
+                  <div>
+                    <img
+                      class="rounded-circle"
+                      src="./assets/electronics.jpeg"
+                      alt=""
+                    />
+                  </div>
+                  <div>Electronics</div>
+                </div>
+                <div class="category-item" data-category="/category/jewelery">
+                  <div>
+                    <img class="rounded-circle" src="./assets/jew.jfif" alt="" />
+                  </div>
+                  <div>Jewelery</div>
+                </div>
+              </div>
             </div>
-            <div>All Products</div>
-          </div>
-          <div class="category-item" data-category="/category/electronics">
-            <div>
-              <img
-                class="rounded-circle"
-                src="./assets/electronics.jpeg"
-                alt=""
-              />
+    
+            <div class="carousel-item">
+              <div class="d-flex justify-content-evenly text-center">
+                <div class="category-item" data-category="/category/men's clothing">
+                  <div>
+                    <img class="rounded-circle" src="./assets/men.jfif" alt="" />
+                  </div>
+                  <div>Men's clothing</div>
+                </div>
+                <div
+                  class="category-item"
+                  data-category="/category/women's clothing"
+                >
+                  <div>
+                    <img class="rounded-circle" src="./assets/men.jfif" alt="" />
+                  </div>
+                  <div>Women's clothing</div>
+                </div>
+              </div>
             </div>
-            <div>Electronics</div>
+            
           </div>
-          <div class="category-item" data-category="/category/jewelery">
-            <div>
-              <img class="rounded-circle" src="./assets/jew.jfif" alt="" />
-            </div>
-            <div>Jewelery</div>
-          </div>
-          <div class="category-item" data-category="/category/men's clothing">
-            <div>
-              <img class="rounded-circle" src="./assets/men.jfif" alt="" />
-            </div>
-            <div>Men's clothing</div>
-          </div>
-          <div class="category-item" data-category="/category/women's clothing">
-            <div>
-              <img class="rounded-circle" src="./assets/men.jfif" alt="" />
-            </div>
-            <div>Women's clothing</div>
-          </div>
+          
+          <button class="sliderbtn"
+            type="button"
+            data-bs-target="#carousel"
+            data-bs-slide="next" style="font-size: 32px;">></button>
         </div>
       </div>
     </section>
@@ -253,37 +260,11 @@
       aria-hidden="true"
     >
       <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-          
-        </div>
+        <div class="modal-content"></div>
       </div>
     </div>
 
 
-
-
-    <div id="carouselExample" class="carousel slide">
-      <div class="carousel-inner">
-        <div class="carousel-item active d-flex">
-          <img src="https://placehold.co/600x400.png" class="d-block w-50" alt="...">
-          <img src="https://placehold.co/600x400.png" class="d-block w-50" alt="...">
-        </div>
-        <div class="carousel-item">
-          <img src="https://placehold.co/600x400.png" class="d-block w-100" alt="...">
-        </div>
-        <div class="carousel-item">
-          <img src="https://placehold.co/600x400.png" class="d-block w-100" alt="...">
-        </div>
-      </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
-    </div>
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"

@@ -79,6 +79,9 @@ body{
 
 
 /* Category */
+.category-item{
+    cursor: pointer;
+}
 
 .category-item img{
     width: 100px;
@@ -117,6 +120,12 @@ body{
 .modal-body img{
     width: 60%;
     height: 300px;
+}
+
+.sliderbtn{
+    all: unset;
+    font-size: 32px;
+    cursor: pointer;
 }
 
 
