@@ -10,6 +10,7 @@ nav >div{
 }
 nav img{
     width: 120px;
+    margin-right: 20px;
 }
 
 .nav-link{
@@ -29,16 +30,19 @@ nav img{
 
     height: 40px;
     padding-bottom: 10px;
-    border-radius: 30px;
-    max-width: 100%;
+    
+    
+    width: 500px;
     position: relative;
 }
 .search-bar input[type='text']{
     width: 100%;
     border: 1px solid #e4e4e4;
     padding: 0 0 0 1rem;
-    border-radius: 30px;
+    /* border-radius: 30px; */
     height: 40px;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
 }
 .search-bar input:focus{
    outline: none;
@@ -94,7 +98,9 @@ nav img{
 
 
 
-
+.navbar__bar{
+    display: flex;
+}
 
 
 
@@ -103,17 +109,19 @@ nav img{
 .user{
     text-transform: uppercase;
     font-weight: 600;
-    font-size: 14px;
+    /* font-size: 14px; */
 }
 
 
 /* LOCATION BOX */
 .location-box{
     min-width: 100px;
+    height: 40px;
     border:1px solid var(--border);
+    border-right: none;
     text-align: right;
     padding: 10px 10px;
-    border-radius: 20px;
+    border-radius: 30px 0 0 30px;
 }
 .location-box  span:first-child{
     padding-right: 5px;

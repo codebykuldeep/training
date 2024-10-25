@@ -18,6 +18,7 @@ search.addEventListener('blur',()=>{
 //product search
 
 const searchRelatedProducts = function(name){
+    if(name.length === 0) return;
     const  result = medicineList.filter((product)=>product.name.toLowerCase().includes(name));
     return result;
 }
@@ -28,7 +29,7 @@ const searchListUpdate= function(){
     console.log(search.value);
 
 
-    let resultProductArray = searchRelatedProducts(search.value);
+    let resultProductArray = searchRelatedProducts(search.value) ?? [];
     
     
     resultProductArray.forEach((product)=>{

@@ -20,7 +20,7 @@ body{
 
     
 }
-.modal{
+.modal-box{
     position: absolute;
     top: 10%;
     left: 30%;
@@ -30,6 +30,8 @@ body{
     background-color: white;
 
 }
+
+
 
 /*FORM COMMON PROPERTIES*/
 
@@ -96,8 +98,20 @@ body{
 
 
 /* Delete Modal */
+
+
 .delete-box{
     padding: 30px;
+}
+.delete-box button{
+    all: unset;
+    cursor: pointer;
+    padding: 10px;
+    color: white;
+    background: var(--font-black);
+}
+.delete-box button:hover{
+    background: var(--btn-color);
 }
 
 .delete-btn-box{

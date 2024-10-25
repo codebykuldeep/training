@@ -1,4 +1,7 @@
 @media(max-width:1024px){
+    .search-bar{
+        width: 300px;
+    }
     .feature-info{
         justify-content: flex-start;
         
@@ -8,11 +11,17 @@
         margin-bottom: 10px;
         width: 50%;
     }
+    .product-list{
+        grid-auto-columns: calc((100% / 2) - 12px);
+    }
     
 
 }
 
 @media(max-width:768px){
+    .search-bar{
+        width: 100%;
+    }
     .slider{
         background-color: #3fb1bf;
         max-width: 90%;
@@ -44,6 +53,13 @@
     .subscribe{
         width: 80%;
     }
+
+    .product-list{
+        grid-auto-columns: calc(100%  - 12px);
+    }
+    .product-section{
+        display: none;
+    }
     
 }
 
@@ -70,7 +86,7 @@
     .doc-text-head{
         font-size: 1.5rem;
     }
-    .doc-text-2{
+    .doc-text-2 h2{
         font-size: 1rem;
     }
 
