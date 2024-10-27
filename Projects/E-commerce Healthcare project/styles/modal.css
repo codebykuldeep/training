@@ -17,8 +17,10 @@ body{
     z-index: 5;
 
     
+
+    
 }
-.modal{
+.modal-box{
     position: absolute;
     top: 10%;
     left: 30%;
@@ -30,9 +32,12 @@ body{
 }
 
 
+
+/*FORM COMMON PROPERTIES*/
+
 .form-close-box{
     text-align: right;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid var(--border);
     padding:10px 20px;
 }
 
@@ -50,13 +55,63 @@ body{
 }
 
 
+/*LOGIN FORM*/
+
+.close-modal{
+    all: unset;
+    font-size: 20px;
+    cursor: pointer;
+}
+.form-box h3{
+    padding: 0 0 2rem 0;
+}
+.form-box input{
+    border: none;
+    border-bottom: 1px solid var(--border);
+    font-size: 1.1rem;
+    padding: 10px 0 10px 5px ;
+}
+.form-box input:focus{
+    outline: 0;
+}
+
+.form-box button[type='submit']{
+    all: unset;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: inherit;
+    padding: 0.5rem 0;
+    color: white;
+    text-align: center;
+    background-color: var(--font-black);
+}
+
+.form-box button[type='submit']:hover{
+    background-color: var(--btn-color);
+}
+.input-msg,.login-msg{
+    color: #eb5555;
+}
+
 
 
 
 
 /* Delete Modal */
+
+
 .delete-box{
     padding: 30px;
+}
+.delete-box button{
+    all: unset;
+    cursor: pointer;
+    padding: 10px;
+    color: white;
+    background: var(--font-black);
+}
+.delete-box button:hover{
+    background: var(--btn-color);
 }
 
 .delete-btn-box{

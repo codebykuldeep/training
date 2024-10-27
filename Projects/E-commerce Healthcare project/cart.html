@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="styles/nav.css">
     <link rel="stylesheet" href="styles/cart.css">
     <link rel="stylesheet" href="styles/modal.css">
+    <link rel="stylesheet" href="/styles/responsive.css">
     
 
 
@@ -18,39 +19,55 @@
 
     <nav>
         <div>
-            <img src="assets/logo.jpg" alt="" srcset="">
-        </div>
-        <div>
-            <div>
-                <form action="">
-                    <div class="search-bar">
-                        <input type="text" id="search">
-                        <!-- <input type="submit"> -->
-                        <div class="dropdown">
-                            <li>Type to search for products</li>
+            <div class="navbar__bar">
+                <img src="assets/logo.jpg" alt="" srcset="">
+                <div class="location-box">
+                    <span class="location">India</span><span id="get-location" class="btn"> <i class="fa-solid fa-location-dot"></i></span>
+                </div>
+                <div>
+                    <form action="">
+                        <div class="search-bar">
+                            <input type="text" id="search" placeholder="Search by products...">
+                            <!-- <input type="submit"> -->
+                            <div class="dropdown">
+                                <li>Type to search for products</li>
+                            </div>
                         </div>
-                    </div>
-                </form>
+                    </form>
+                </div>
             </div>
-            <ol class="nav-link">
-                <li><a href="/">Home</a></li>
-                <li>Shop</li>
-                <li>Blog</li>
-                <li>Contact</li>
-                <li>On Sale</li>
-            </ol>
+            
+            
+            <!-- <div class="user">
+               <span class="signin btn"> Sign In</span> / <span class="register btn">Register</span>
+            </div> -->
+            <a href="cart.html" class="cart-btn">
+                <div><i class="fa-solid fa-bag-shopping"></i></div>
+                <div class="cart-count">10</div>
+            </a>
         </div>
-        <div class="user">
-           <span class="signin btn"> Sign In</span>/ <span class="register btn">Register</span>
-        </div>
-        <div>
-            <i class="fa-regular fa-heart" style="font-size: 30px;"></i>
-        </div>
-        <a href="/cart.html">
-            <span class="material-symbols-outlined">
-                shopping_bag
-            </span>
-        </a>
+
+
+        <ol class="nav-link">
+            <li class="nav-dropdown">
+                <div class="nav-drop-btn"><a href="index.html">Home</a></div>
+            </li>
+            <li class="nav-dropdown">
+                <div class="nav-drop-btn">Shop</div>
+                <div class="nav-drop-content">content</div>
+            </li>
+            <li class="nav-dropdown">
+                <div class="nav-drop-btn">Blog</div>
+                <div class="nav-drop-content">content</div>
+            </li>
+            <!-- <li class="nav-dropdown">
+                <div class="nav-drop-btn">Contact</div>
+                <div class="nav-drop-content">content</div>
+            </li> -->
+            <li class=" user">
+                <span class="signin btn "> Sign In</span> / <span class="register btn">Register</span>
+            </li>
+        </ol>
     </nav>
 
 
@@ -155,23 +172,25 @@
         </div>
     </div>
 
-    <div class="delete-modal modal hidden">
-        <div class="delete-close-box form-close-box">
-            <button class="close-modal"><i class="fa-solid fa-xmark"></i></button>
-        </div>
-        <div class="delete-box">
-            <h3>Are you sure , you want to remove from cart!</h3>
-            <div class="delete-btn-box">
-                <button id="delete-yes">Yes</button>
-                <button id="delete-no">No</button>
-            </div>
-        </div>
-    </div>
+    
 
     
 
 
-    <div class="overlay hidden"></div>
+    <div class="overlay hidden">
+        <div class="delete-modal modal hidden">
+            <div class="delete-close-box form-close-box">
+                <button class="close-modal"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <div class="delete-box">
+                <h3>Are you sure , you want to remove from cart!</h3>
+                <div class="delete-btn-box">
+                    <button id="delete-yes">Yes</button>
+                    <button id="delete-no">No</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     
 
@@ -179,6 +198,8 @@
     <script src="scripts/authentication.js"></script>
     <script src="scripts/checkout.js"></script>
     <script src="scripts/searchbar.js"></script>
+    <script src="scripts/cart.js"></script>
+    
     <script src="https://kit.fontawesome.com/0af408009a.js" crossorigin="anonymous"></script>
 </body>
 </html>

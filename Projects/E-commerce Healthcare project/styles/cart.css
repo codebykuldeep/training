@@ -24,6 +24,8 @@ section{
 .cart{
     border: 1px solid var(--cart-border);
     background-color: white;
+    width:70%;
+    
 }
 .cart-title{
     padding: 20px 0px 8px 10px;
@@ -37,7 +39,7 @@ section{
 .item-container{
     display: flex;
     flex-direction: column;
-    width: 800px;
+    
 
     border-top: 1px solid var(--cart-border);
 }
@@ -46,6 +48,8 @@ section{
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+    width: 100%;
+    
     
     padding: 10px 10px;
 }
@@ -127,4 +131,32 @@ section{
 }
 .checkout-btn:hover{
     background-color: var(--btn-color);
+}
+
+
+@media(max-width:1024px){
+    .cart-container{
+        
+        gap: 20px;
+    
+    }
+    
+
+}
+
+@media(max-width:768px){
+    .cart-container{
+        flex-direction: column;
+        justify-content: center;
+        gap: 20px;
+        padding: 20px 10px 0;
+    }
+    .cart{
+        width: 100%;
+    }
+    .checkout{
+        width: 100%;
+    }
+    
+    
 }
