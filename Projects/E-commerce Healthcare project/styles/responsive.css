@@ -12,7 +12,7 @@
         width: 50%;
     }
     .product-list{
-        grid-auto-columns: calc((100% / 2) - 12px);
+        grid-auto-columns: calc((100% / 3));
     }
     
 
@@ -55,11 +55,9 @@
     }
 
     .product-list{
-        grid-auto-columns: calc(100%  - 12px);
+        grid-auto-columns: calc((100% / 2));
     }
-    .product-section{
-        display: none;
-    }
+    
     
 }
 
@@ -118,6 +116,10 @@
     .footer-link{
         margin: 30px 0;
         width: 100%;
+    }
+
+    .product-list{
+        grid-auto-columns: calc(100% );
     }
     
 }

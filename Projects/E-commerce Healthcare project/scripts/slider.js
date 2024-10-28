@@ -7,7 +7,7 @@ const productCard =document.querySelector('.product-container').scrollWidth
 let isDragging = false, startX , startScrollLeft;
 
 const buttons =document.querySelectorAll('button');
-const card =370;//carousel.querySelector('.card').offsetWidth || ;
+const card =document.querySelector('.product-container').offsetWidth;//370;//carousel.querySelector('.card').offsetWidth || ;
 
 console.log(card);
 
@@ -23,12 +23,12 @@ console.log(card);
 sliderLeft.addEventListener('click',()=>{
     console.log(window.screen.width/3);
     
-    carousel.scrollLeft +=  -window.screen.width/3;
+    carousel.scrollLeft +=  -card;
 })
 sliderRight.addEventListener('click',()=>{
     console.log('clicked');
     
-    carousel.scrollLeft += window.screen.width/3;
+    carousel.scrollLeft += card;
 })
 
 
@@ -61,3 +61,57 @@ carousel.addEventListener('mousedown',dragStart);
 
 
 document.addEventListener('mouseup',dragStop);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//TESTOMONIAL SLIDER
+let currentSlide = 1;
+let reviewSlideArray =document.querySelectorAll('.review-data');
+let totalSlide = reviewSlideArray.length;
+
+
+reviewSlideArray.forEach((slide,index)=>{
+    slide.style.transform =`translateX(${index*200}%)`
+})
+const [reviewLeftBtn ,reviewRightBtn] =document.querySelectorAll('.testimonial-btn')
+
+reviewRightBtn.addEventListener('click',()=>{
+    if(currentSlide+1>totalSlide){
+        reviewSlideArray.forEach((slide,index)=>{
+            slide.style.transform =`translateX(${index*200}%)`
+        })
+        currentSlide =1;
+        return;
+    }
+
+    reviewSlideArray[currentSlide-1].style.transform = `translateX(${currentSlide*-200}%)`;
+    currentSlide+=1;
+    reviewSlideArray[currentSlide-1].style.transform = `translateX(${0}%)`;
+})
+
+reviewLeftBtn.addEventListener('click',()=>{
+    if(currentSlide-1 === 0){
+        reviewSlideArray.forEach((slide,index)=>{
+            slide.style.transform =`translateX(${(totalSlide-index -1)*200}%)`
+        })
+        currentSlide =totalSlide;
+        return;
+    }
+
+    reviewSlideArray[currentSlide-1].style.transform = `translateX(${currentSlide*200}%)`;
+    currentSlide-=1;
+    reviewSlideArray[currentSlide-1].style.transform = `translateX(${0}%)`;
+})

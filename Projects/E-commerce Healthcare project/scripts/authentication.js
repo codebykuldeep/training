@@ -1,5 +1,3 @@
-const signInBtn = document.querySelector(".signin");
-const registerBtn = document.querySelector(".register");
 
 //modal elemets
 const loginModal = document.querySelector(".login-modal");
@@ -16,8 +14,17 @@ const registerSubmitBtn = document.getElementById("register-submit");
 const registerInput = document.querySelectorAll(".register-data");
 
 //user element
-const userBox = document.querySelector(".user");
 
+let userBox ,signInBtn , registerBtn;
+userBox = document.querySelector(".user")
+  signInBtn = document.querySelector(".signin");
+  registerBtn = document.querySelector(".register");
+// function userButton(){
+//   userBox = document.querySelector(".user")
+//   signInBtn = document.querySelector(".signin");
+//   registerBtn = document.querySelector(".register");
+// }
+// userButton();
 //functions for actions
 //for handling overlay and modal
 function handleModal(dom1, dom2) {
@@ -27,6 +34,15 @@ function handleModal(dom1, dom2) {
 
 function UpdateUser() {
   userBox.textContent = `Hello , ${currentUser.firstName}`;
+  userBox.insertAdjacentHTML('afterend','<div class="nav-drop-content logout">Logout</div>')
+
+  // const logout = document.querySelector('.logout');
+  // logout.addEventListener('click',()=>{
+  //   sessionStorage.clear();
+  //   userBox.parentElement.innerHTML = `<div class="nav-drop-btn user"> <span class="signin "> Sign In</span> / <span class="register">Register</span></div>
+  //               `;
+  //   userButton();
+  // })
 }
 //check if current user is available in session storage
 if (currentUser) {
@@ -115,7 +131,7 @@ const validateForm = (inputDomArray,inputMsg,checkbox) => {
       }
     }
     if (checkbox && inputElement.type === "checkbox") {
-      result = inputElement.checked;
+      // result = inputElement.checked;
       inputElement.parentNode.children[1].style.color = errorBorderColor;
     }
   });
@@ -163,6 +179,8 @@ registerSubmitBtn.addEventListener("click", (e) => {
   
 
   const inputMsg = document.querySelectorAll(".register-form .input-msg");
+  console.log(validateForm(registerInput,inputMsg,true));
+  
   if (validateForm(registerInput,inputMsg,true)) {
     let name = registerInput[0].value;
     let last =registerInput[1].value;
@@ -200,3 +218,5 @@ loginInput.forEach((inpElement,index) => {
     inpElement.style.borderBottom = "1px solid var(--border)";
   });
 });
+
+
