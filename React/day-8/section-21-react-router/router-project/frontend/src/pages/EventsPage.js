@@ -39,12 +39,19 @@
 
 
 import React from 'react'
-import { useLoaderData } from 'react-router-dom'
+import { useLoaderData, useRouteError } from 'react-router-dom'
 import EventsList from '../components/EventsList'
 
 export default function EventsPage() {
   const events = useLoaderData();
+
+  const error = useRouteError();
+  console.log(error);
+  
   return (
+    
+    <>
     <EventsList events={events} />
+    </>
   )
 }
