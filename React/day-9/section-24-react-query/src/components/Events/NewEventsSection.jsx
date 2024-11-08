@@ -13,8 +13,8 @@ export default function NewEventsSection() {
   // const [isLoading, setIsLoading] = useState(false);
 
   const { data ,isPending, isError,error } = useQuery({
-    queryKey:['events'],
-    queryFn:fetchEvents,
+    queryKey:['events',{max:3}],
+    queryFn:({signal,queryKey})=>fetchEvents({signal,...queryKey[1]}),
   })
 
   // useEffect(() => {

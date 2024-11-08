@@ -12,7 +12,7 @@ export default function EventDetails() {
   console.log(id);
 
   const {data,isPending,isError,error} = useQuery({
-    queryKey:['events',{eventId:id}],
+    queryKey:['events',id],
     queryFn:({signal})=>fetchEvent({signal,id}),
 
   })
