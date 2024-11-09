@@ -7,7 +7,13 @@ function App() {
 
   return (
     <div id="demo">
-      <motion.div id="box" animate={{x:x}}/>
+      <motion.div id="box" animate={{x:x , y ,rotate}}
+        transition={{
+          duration:0.3,
+          // bounce:5,
+          type:'spring'
+        }}
+        />
 
       <div id="inputs">
         <p>
