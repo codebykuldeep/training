@@ -1,0 +1,35 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.header{
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  justify-content: flex-start;
+  gap: 30px;
+  div{
+    cursor: pointer;
+  }
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  background-color: #f4f4f9;
+}
+
+
+.movie input {
+  width: 50%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.movie{
+  margin: 10px 10px;
+}
