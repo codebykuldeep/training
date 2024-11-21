@@ -1,0 +1,36 @@
+class Department{
+    private id:string;
+    public department:string;
+
+
+    constructor(name:string,id:string){
+        this.id = id;
+        this.department = name;
+    }
+    getId(){
+        console.log(this.id);   
+    }
+    getDepartment(){
+        console.log(this.department);
+        
+    }
+}
+
+const accounting = new Department('accounting','acc');
+
+console.log(accounting)
+
+class ItDepartment extends Department{
+    admins:string[];
+    constructor(id:string,name:string,admins:string[]){
+        super(name,id)
+        this.admins =admins;
+    }
+    getAdmins(){
+        console.log(this.admins);
+        
+    }
+}
+
+const it = new ItDepartment('IT',"IT ADMINS",["max",'derek'])
+it.getAdmins();
