@@ -46,11 +46,14 @@ export async function getAllEvents() {
 export async function getFilteredEvents(dateFilter) {
   const { year, month } = dateFilter;
   const data =await getAllEvents();
+  console.log(data);
+  
   let filteredEvents = data.filter((event) => {
     const eventDate = new Date(event.date);
     return eventDate.getFullYear() === year && eventDate.getMonth() === month - 1;
   });
-
+  
+  
   return filteredEvents;
 }
 

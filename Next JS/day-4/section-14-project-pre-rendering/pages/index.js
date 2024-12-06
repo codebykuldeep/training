@@ -1,5 +1,6 @@
 import { getAllEvents, getFeaturedEvents } from '../dummy-data';
 import EventList from '../components/events/event-list';
+import { revalidatePath } from 'next/cache';
 
 function HomePage(props) {
   
@@ -17,7 +18,8 @@ export async function getStaticProps(){
   return {
     props:{
       events:events
-    }
+    },
+    revalidate:10,
   }
 }
 
