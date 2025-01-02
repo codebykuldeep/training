@@ -1,0 +1,22 @@
+{
+  "name": "ts-node",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index.ts",
+    "build":"npm install && tsc",
+    "start":"node ./build/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@types/express": "^5.0.0",
+    "@types/node": "^22.10.3",
+    "express": "^4.21.2"
+  },
+  "devDependencies": {
+    "ts-node": "^10.9.2"
+  }
+}
