@@ -1,0 +1,6 @@
+this is a test file for fs module
+THIS IS second line 
+this is third line
+this is fourth line
+this is going to streamed here and there
+this is end of file
